@@ -1,0 +1,16 @@
+$mainbackground:
+1. #328CC1 - Sky Blue
+2. #F2F1EF
+
+
+$secondbackground:
+1. #0b3c5d - Prussian Blue
+2. #D8CFD0
+
+$accentcolor:
+1. #d9d410 - Gold Leaf
+2. #B1A6A4
+
+$hovercolor:
+1. #1d2731 - black
+2. ##413F3D
