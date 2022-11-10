@@ -9,6 +9,7 @@
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     background-color: var(--mainbackground);
+    color: var(--hoverback);
 }
 .sidemenu {
     height: 100%;
@@ -48,6 +49,12 @@ body {
 }
 
 .main {
+    margin: 0em 2em 0em 15em;
+    font-size: 1em;
+    padding: 0px 10px;
+}
+
+.project {
     margin: 0em 2em 0em 15em;
     font-size: 1em;
     padding: 0px 10px;
