@@ -1,6 +1,14 @@
+:root {
+    --mainbackground: #F2F1EF; /* głowny color tła na całą stronę */
+    --secondbackground: #D8CFD0; /* color tła mniejszych sekcji, boczne menu itp */
+    --accentcolor: #B1A6A4; /* kolor akcentu, napisów, tła przycisków */
+    --hoverback: #413F3D; /* color tła po hoverze */
+    --hovertext: #B1A6A4; /* color tekstu po hoverze, taki sam jak accentu */
+}
+
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-color: #F2f1ef;
+    background-color: var(--mainbackground);
 }
 .sidemenu {
     height: 100%;
@@ -9,7 +17,7 @@ body {
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: #d8cfd0;
+    background-color: var(--secondbackground);
     overflow: hidden;
     padding-top: 1em;
 }
@@ -23,20 +31,20 @@ body {
     border: solid;
 }
 .sidemenu h1 {
-    color:#b1a6a4;
+    color:var(--accentcolor);
 }
 
 .sidemenu a {
     padding: 6px 8px 6px 16px;
     text-decoration: none;
     font-size: 1em;
-    color:#413f3d;
+    color:var(--hoverback);
     display: block;
-    background-color: #b1a6a4;
+    background-color: var(--accentcolor);
 }
 .sidemenu a:hover {
-    color:#d9b410; /*#f1f1f1;*/
-    background-color: #1d2731;
+    color:var(--hovertext); /*#f1f1f1;*/
+    background-color: var(--hoverback);
 }
 
 .main {
