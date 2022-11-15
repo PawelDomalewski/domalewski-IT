@@ -6,6 +6,10 @@
     --hovertext: #B1A6A4; /* color tekstu po hoverze, taki sam jak accentu */
 }
 
+* {
+    color: var(--hoverback);
+}
+
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     background-color: var(--mainbackground);
@@ -32,15 +36,13 @@ body {
     transform: translate(-50%, 0%);
     border: solid;
 }
-.sidemenu h1 {
-    color:var(--accentcolor);
-}
+
 
 .sidemenu a {
     padding: 6px 8px 6px 16px;
     text-decoration: none;
     font-size: 1em;
-    color:var(--hoverback);
+    /*color:var(--hoverback); */
     display: block;
     background-color: var(--accentcolor);
 }
