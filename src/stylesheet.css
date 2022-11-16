@@ -38,16 +38,76 @@ body {
 }
 
 
-.sidemenu a {
+.sidemenu button {
+    width: 100%;
     padding: 6px 8px 6px 16px;
     text-decoration: none;
     font-size: 1em;
     /*color:var(--hoverback); */
     display: block;
     background-color: var(--accentcolor);
+    border: none;
+    outline: none;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s;
 }
-.sidemenu a:hover {
+.sidemenu button:hover {
     color:var(--hovertext); /*#f1f1f1;*/
+    background-color: var(--hoverback);
+}
+
+.sidemenu button.active {
+    background-color: var(--hoverback);
+    color: var(--hovertext);
+}
+
+.tabcontent {
+    margin: 0em 0em 0em 15em;
+    font-size: 1em;
+    padding: 0px 10px;
+    float: left;
+}
+
+.project {
+    margin: 0em 2em 0em 15em;
+    font-size: 1em;
+    padding: 0px 10px;
+}
+/*Pierwsza wersja klasyczna*/
+/*.sidemenu {
+    height: 100%;
+    width: 15em;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: var(--secondbackground);
+    overflow: hidden;
+    padding-top: 1em;
+}
+
+.sidemenu img {
+    border-radius: 100%;
+    position: relative;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    border: solid;
+}
+
+
+.sidemenu a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 1em; */
+    /*color:var(--hoverback); */
+   /* display: block;
+    background-color: var(--accentcolor);
+}
+
+.sidemenu a:hover {
+    color:var(--hovertext); /*#f1f1f1;*//*
     background-color: var(--hoverback);
 }
 
@@ -61,4 +121,4 @@ body {
     margin: 0em 2em 0em 15em;
     font-size: 1em;
     padding: 0px 10px;
-}
+} */

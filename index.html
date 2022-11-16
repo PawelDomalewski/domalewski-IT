@@ -12,8 +12,33 @@
     <div class="sidemenu">
         <img src="./upload/Paweł Domalewski_stopka.png">
         <h1 id="name">Paweł Domalewski</h1>
+        <button class="tablinks" onclick="openTab(event, 'about')" id="defaultOpen">O mnie</button>
+        <button class="tablinks" onclick="openTab(event, 'myprojects')">Moje Projekty</button>
+    </div>
+
+    <div id="about" class="tabcontent">
+        <h2>O mnie</h2>
+        <p>Kilka słów o mnie. Ta strona będzie zawierać informacje z CV</p>
+    </div>
+    <div id="myprojects" class="tabcontent">
+        <h2>Moje projekty</h2>
+        <p>Ta strona będzie zawierać listę moich aktualnych jak i planowanych projektów oraz
+            ich opis
+        </p>
+        <ol>
+            <li>Strona BIO</li>
+            <li>Strona o Pierwszej Kampani DnD</li>
+            <li>Strona o aktualnie trwającej kampanii DnD</li>
+        </ol>
+    </div>
+
+    <!-- Pierwsza wersja, klasyczna -->
+    <!--
+    <div class="sidemenu">
+        <img src="./upload/Paweł Domalewski_stopka.png">
+        <h1 id="name">Paweł Domalewski</h1>
         <a href="#about">O mnie</a>
-        <a href="https://www.canva.com/learn/website-color-schemes/">Moje Projekty</a>
+        <a href="#myprojects">Moje Projekty</a>
     </div>
     <div class="main">
         <h2 id="about">O mnie</h2>
@@ -29,7 +54,31 @@
             <li>Strona o Pierwszej Kampani DnD</li>
             <li>Strona o aktualnie trwającej kampanii DnD</li>
         </ol>
-    </div>
+    </div>-->
+    <script>
+        function openTab(evt, tabName) {
+            // Declare all variables
+            var i, tabcontent, tablinks;
+
+            // Get all elements with class="tabcontent" and hide them
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+
+            // Get all elements with class="tablinks" and remove the class "active"
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+
+            // Show the current tab, and add an "active" class to the link that opened the tab
+            document.getElementById(tabName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+        // Get the element with id="defaultOpen" and click on it
+        document.getElementById("defaultOpen").click();
+    </script>
 </body>
 
 </html>
