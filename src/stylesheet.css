@@ -78,9 +78,20 @@ body {
     color: var(--hoverback);
     text-align: center;
     padding: 0.1em;
-    max-width: 50%;
+    max-width: 100%;
     display: block;
     box-shadow: 4px 4px 5px var(--hoverback);
+}
+
+.tabcontent h3 {
+    border-bottom: 2px var(--accentcolor) solid;
+    max-width: 1000%;
+}
+
+.tabcontent p {
+    float: left;
+    margin-right: 1em;
+    text-decoration:none;
 }
 
 .project {
