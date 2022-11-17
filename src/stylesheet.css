@@ -2,7 +2,7 @@
     --mainbackground: #FfFffF; /* głowny color tła na całą stronę */
     --secondbackground: #f5f5f5; /* color tła mniejszych sekcji, boczne menu itp */
     --accentcolor: #2e3d4a; /* kolor akcentu, napisów, tła przycisków */
-    --hoverback: #dddddd; /* color tła po hoverze */
+    --hoverback: #e1e1e1; /* color tła po hoverze */
     --hovertext: #000000; /* color tekstu po hoverze, taki sam jak accentu */
 }
 
@@ -15,6 +15,7 @@ body {
     background-color: var(--mainbackground);
     color: var(--hoverback);
     margin: 2em;
+    margin-top: auto;
 }
 .sidemenu {
     margin-left: 0.5rem;
@@ -68,7 +69,7 @@ body {
 .tabcontent {
     margin: 0em 0em 0em 15em;
     font-size: 1em;
-    padding: 0px 10px;
+    padding: 0px 0px;
     float: left;
 }
 
