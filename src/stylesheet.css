@@ -16,11 +16,6 @@
     color: var(--accentcolor);
 }
 
-a {
-    text-decoration: none;
-    color: var(--hovertext);
-}
-
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     background-color: var(--mainbackground);
@@ -75,6 +70,18 @@ body {
 .sidemenu button.active {
     background-color: var(--hoverback);
     color: var(--hovertext);
+}
+
+a {
+    text-decoration: none;
+    color: var(--hovertext);
+    transition: 0.3s;
+}
+
+a:hover {
+    background-color: var(--accentcolor);
+    color: var(--hoverback);
+    padding: 3px 3px 3px 3px;
 }
 
 .tabcontent {
