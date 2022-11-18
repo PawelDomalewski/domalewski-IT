@@ -1,4 +1,10 @@
 :root {
+    /*--mainbackground: #F2F1EF; /* głowny color tła na całą stronę 
+    --secondbackground: #D8CFD0; /* color tła mniejszych sekcji, boczne menu itp 
+    --accentcolor: #B1A6A4; /* kolor akcentu, napisów, tła przycisków 
+    --hoverback: #413F3D; /* color tła po hoverze 
+    --hovertext: #B1A6A4; /* color tekstu po hoverze, taki sam jak accentu */
+
     --mainbackground: #FfFffF; /* głowny color tła na całą stronę */
     --secondbackground: #f5f5f5; /* color tła mniejszych sekcji, boczne menu itp */
     --accentcolor: #2e3d4a; /* kolor akcentu, napisów, tła przycisków */
@@ -89,7 +95,7 @@ body {
 }
 
 .tabcontent p {
-    float: left;
+   /* float: left;*/
     margin-right: 1em;
     text-decoration:none;
 }
@@ -99,6 +105,12 @@ body {
     font-size: 1em;
     padding: 0px 10px;
 }
+
+table th {
+    width: 30%;
+    text-align: left;
+}
+
 /*Pierwsza wersja klasyczna*/
 /*.sidemenu {
     height: 100%;
