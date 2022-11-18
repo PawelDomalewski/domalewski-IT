@@ -107,9 +107,13 @@ body {
 }
 
 table th {
-    width: 30%;
+    width: 20%;
     text-align: left;
 }
+
+th, td {
+    border-bottom: 1px solid #ddd;
+  }
 
 /*Pierwsza wersja klasyczna*/
 /*.sidemenu {
