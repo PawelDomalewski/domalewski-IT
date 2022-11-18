@@ -92,7 +92,7 @@ body {
 
 .tabcontent h3 {
     border-bottom: 2px var(--accentcolor) solid;
-    max-width: 1000%;
+    max-width: 100%;
 }
 
 .tabcontent p {
