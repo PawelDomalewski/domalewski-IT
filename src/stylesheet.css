@@ -132,10 +132,30 @@ tr:nth-child(even) {
     background-color:var(--hoverback);
 }
 
+.flex {
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-container1 {
+    float: left;
+    flex-grow: 1;
+}
+
+.flex-container2 {
+    float: right;
+    flex-grow: 1;
+}
+
   @media screen and (max-width: 800px) {
+
+    .flex {
+        flex-direction: column;
+    }
+
     .sidemenu {
         margin-left: 0rem;
-        height: 20rem;
+        height:23rem;
         width: 100%;
         position: absolute;
         top: 0;
@@ -146,7 +166,7 @@ tr:nth-child(even) {
     }
     .tabcontent {
         width: 100%;
-        margin: 20rem 0em 0em 0em;
+        margin: 23rem 0em 0em 0em;
         font-size: 1em;
         padding: 0px 0px;
         float: left;
