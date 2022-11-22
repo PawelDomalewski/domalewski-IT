@@ -124,9 +124,13 @@ table th {
     text-align: left;
 }
 
-th, td {
-    border-bottom: 1px solid #ddd;
-  }
+/*th, td {
+    border-bottom: 1px solid var(--hoverback);
+  }*/
+
+tr:nth-child(even) {
+    background-color:var(--hoverback);
+}
 
   @media screen and (max-width: 800px) {
     .sidemenu {
