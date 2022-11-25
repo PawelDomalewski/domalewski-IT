@@ -81,7 +81,7 @@ a {
 a:hover {
     background-color: var(--accentcolor);
     color: var(--hoverback);
-    padding: 3px 3px 3px 3px;
+    padding: 3px 0px 3px 0px;
 }
 
 .tabcontent {
@@ -124,7 +124,7 @@ a:hover {
 }
 
 table th {
-    width: 20%;
+    width: 10%;
     text-align: left;
 }
 
@@ -144,11 +144,13 @@ tr:nth-child(even) {
 .flex-container1 {
     float: left;
     flex-grow: 1;
+    max-width: 50%;
 }
 
 .flex-container2 {
     float: right;
     flex-grow: 1;
+    max-width: 50%;
 }
 
   @media screen and (max-width: 800px) {
@@ -157,7 +159,12 @@ tr:nth-child(even) {
         flex-direction: column;
     }
 
+    .flex-container1, .flex-container2 {
+        max-width: fit-content;
+    }
+
     .sidemenu {
+        display: none;
         margin-left: 0rem;
         height:23rem;
         width: 100%;
@@ -170,7 +177,7 @@ tr:nth-child(even) {
     }
     .tabcontent {
         width: 100%;
-        margin: 23rem 0em 0em 0em;
+        margin: 0rem 0em 0em 0em;
         font-size: 1em;
         padding: 0px 0px;
         float: left;
