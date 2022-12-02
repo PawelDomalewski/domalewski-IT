@@ -90,6 +90,7 @@ a:hover {
     font-size: 1em;
     padding: 0px 0px;
     float: left;
+    animation: fadeEffect 1s;
 }
 
 .tabcontent h2 {
@@ -151,6 +152,11 @@ tr:nth-child(even) {
     float: right;
     flex-grow: 1;
     max-width: 50%;
+}
+
+@keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
 }
 
   @media screen and (max-width: 800px) {
