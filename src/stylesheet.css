@@ -106,7 +106,7 @@ a:hover {
 
 .tabcontent h3 {
     border-bottom: 2px var(--accentcolor) solid;
-    max-width: 100%;
+    width:auto;
 }
 
 .tabcontent p {
