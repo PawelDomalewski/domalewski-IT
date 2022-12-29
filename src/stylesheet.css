@@ -144,13 +144,11 @@ tr:nth-child(even) {
 }
 
 .flex-container1 {
-    float: left;
     flex-grow: 1;
     max-width: 50%;
 }
 
 .flex-container2 {
-    float: right;
     flex-grow: 1;
     max-width: 50%;
 }
