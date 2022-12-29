@@ -106,7 +106,7 @@ a:hover {
 
 .tabcontent h3 {
     border-bottom: 2px var(--accentcolor) solid;
-    width:auto;
+    width:100%;
 }
 
 .tabcontent p {
@@ -165,7 +165,7 @@ tr:nth-child(even) {
     }
 
     .flex-container1, .flex-container2 {
-        max-width: fit-content;
+        max-width: 100%;
     }
 
     .sidemenu {
