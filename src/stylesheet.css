@@ -80,6 +80,12 @@ body {
     color: var(--hoverback);
 }
 
+.switcher {
+    position:fixed;
+    bottom: 0%;
+    width:inherit;
+}
+
 a {
     text-decoration: none;
     color: var(--hovertext);
@@ -177,7 +183,7 @@ tr:nth-child(even) {
 
     .sidemenu {
         margin-left: 0rem;
-        height:23rem;
+        height:25rem;
         width: 100%;
         position: absolute;
         top: 0;
@@ -189,13 +195,16 @@ tr:nth-child(even) {
     
     .tabcontent {
         width: 100%;
-        margin: 23rem 0em 0em 0em;
+        margin: 25rem 0em 0em 0em;
         font-size: 1em;
         padding: 0px 0px;
         float: left;
     }
     body {
         margin: 1em;
+    }
+    .switcher {
+        position: relative;
     }
   }
 
