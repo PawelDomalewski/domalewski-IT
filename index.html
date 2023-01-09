@@ -129,29 +129,49 @@ https://medium.com/@haxzie/dark-and-light-theme-switcher-using-css-variables-and
 
     <div id="myprojects" class="tabcontent">
         <h2>Moje projekty</h2>
-        <p>Ta strona będzie zawierać listę moich aktualnych jak i planowanych projektów oraz
+       <!-- <p>Ta strona będzie zawierać listę moich aktualnych jak i planowanych projektów oraz
             ich opis
-        </p>
+        </p>-->
         <ol>
             <h3>
                 <li>Strona BIO</li>
             </h3>
-            <p>Strona prezentująca informacje o mnie i o moich projektach</p>
+            <p>Strona prezentująca informacje o mnie i o moich projektach.</p>
             <p>Korzystając z JavaScriptu zrobiłem stronę na zasadzie zakładek które się otwiera z bocznego, stałego
                 menu, jednocześnie strona się
                 nie przeładowuje. <br>
                 W zakładce "O mnie", w sekcji "O mnie" oraz "Umiejętności" użyłem flexboxa, by zapewnić lepszą
                 responsywność.
-                Zakładka "O mnie" zawiera moje CV, natomiast zakładka "Moje Projekty" zawiera listę, krótki opis i link
+                Zakładka "O mnie" zawiera moje CV, natomiast zakładka "Moje Projekty" to lista, krótki opis i link
                 do
                 projektów nad którymi pracuję lub które już zakończyłem.
             </p>
             <h3>
-                <li>Strona o Pierwszej Kampani DnD</li>
+                <li>Strona o Pierwszej Kampanii DnD</li>
             </h3>
+            <p>Pierwsza strona stworzona przeze mnie.</p>
+            <p>Strona opisuje bohaterów kampanii RPG, opartej na systemie Dungeons & Dragons 5 Edycja.</p>
+            <p>Zawiera hero image, a poniżej menu które zawiera też dropdown menu oraz przykleja się na stale u góry
+                wraz przewijaniem strony. <br>Posiada też przycisk powrotu do góry, który pojawia się przy przewijaniu w dół.
+                Obrazki i opisy są ułożone przy pomocy prostego float:left, float:right.<br>
+                Responsywność: na mniejszych ekranach znika pozioma sekcja z obrazkami postaci, które po kliknięciu
+                przenoszą do danego bohatera.
+            </p>
             <h3>
                 <li>Strona o Drugiej Kampanii DnD</li>
             </h3>
+            <p>Druga stworzona przeze mnie strona.</p>
+            <p>Strona opisuje bohaterów z drugiej kampanii RPG, również opartej na systemienie D&D.</p>
+            <p>W tym projekcie zastosowałem flexboxa, by w prosty, ale za to bardzo wydajny sposób ułożyć
+                obrazki bohaterów wraz z tekstem, zapewniając tym samym dobrą responsywność na mniejszych ekranach.<br>
+                Innymi słowy:
+                <ul>
+                    <li>:nth-child(odd) - by co drugi zestaw bohater+opis miał odwrotną kolejność</li>
+                    <li>flex-wrap: wrap - dzięki temu nie było potrzeby użycia @media do
+                        ładnego ułożenia zawartości na mniejszych ekranach.
+                    </li>
+                </ul>
+            </p>
         </ol>
     </div>
 
