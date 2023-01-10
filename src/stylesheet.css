@@ -112,7 +112,7 @@ a:hover {
 }
 
 .tabcontent {
-    width: 80%;
+    width: 75%;
     margin: 0em 0em 0em 15em;
     font-size: 1em;
     padding: 0px 0px;
@@ -237,7 +237,6 @@ tr:nth-child(even) {
         margin: 0rem 0em 0em 0em;
         font-size: 1em;
         padding: 0px 0px;
-
         overflow: hidden;
     }
     body {
