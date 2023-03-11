@@ -1,23 +1,33 @@
-:root, 
-    :root.light {
+:root,
+:root.light {
     /*--mainbackground: #F2F1EF; /* głowny color tła na całą stronę */
     /*--secondbackground: #D8CFD0; /* color tła mniejszych sekcji, boczne menu itp */
     /*--accentcolor: #B1A6A4; /* kolor akcentu, napisów, tła przycisków */
     /*--hoverback: #413F3D; /* color tła po hoverze */
     /*--hovertext: #B1A6A4; /* color tekstu po hoverze, taki sam jak accentu*/
-    --mainbackground: #FfFffF; /* głowny color tła na całą stronę */
-    --secondbackground: #f5f5f5; /* color tła mniejszych sekcji, boczne menu itp */
-    --accentcolor: #2e3d4a; /* kolor akcentu, napisów, tła przycisków */
-    --hoverback: #e1e1e1; /* color tła po hoverze */
-    --hovertext: #000000; /* color tekstu po hoverze, taki sam jak accentu */
-    }
+    --mainbackground: #FfFffF;
+    /* głowny color tła na całą stronę */
+    --secondbackground: #f5f5f5;
+    /* color tła mniejszych sekcji, boczne menu itp */
+    --accentcolor: #2e3d4a;
+    /* kolor akcentu, napisów, tła przycisków */
+    --hoverback: #e1e1e1;
+    /* color tła po hoverze */
+    --hovertext: #000000;
+    /* color tekstu po hoverze, taki sam jak accentu */
+}
 
-    :root.dark {
-    --mainbackground: #000000; /* głowny color tła na całą stronę */
-    --secondbackground: #1d1919; /* color tła mniejszych sekcji, boczne menu itp */
-    --accentcolor: #777777; /* kolor akcentu, napisów, tła przycisków */
-    --hoverback: #313131; /* color tła po hoverze */
-    --hovertext: #777777; /* color tekstu po hoverze, taki sam jak accentu */
+:root.dark {
+    --mainbackground: #000000;
+    /* głowny color tła na całą stronę */
+    --secondbackground: #1d1919;
+    /* color tła mniejszych sekcji, boczne menu itp */
+    --accentcolor: #777777;
+    /* kolor akcentu, napisów, tła przycisków */
+    --hoverback: #313131;
+    /* color tła po hoverze */
+    --hovertext: #777777;
+    /* color tekstu po hoverze, taki sam jak accentu */
 }
 
 * {
@@ -62,7 +72,7 @@ button {
     padding: 6px 8px 6px 16px;
     text-decoration: none;
     font-size: 1em;
-    color:var(--hovertext);
+    color: var(--hovertext);
     display: block;
     background-color: var(--hoverback);
     border: none;
@@ -71,8 +81,10 @@ button {
     cursor: pointer;
     transition: 0.3s;
 }
+
 button:hover {
-    color:var(--hoverback); /*#f1f1f1;*/
+    color: var(--hoverback);
+    /*#f1f1f1;*/
     background-color: var(--accentcolor);
 }
 
@@ -82,9 +94,9 @@ button.active {
 }
 
 .switcher {
-    position:fixed;
+    position: fixed;
     bottom: 0%;
-    width:inherit;
+    width: inherit;
 }
 
 .theme-btn.light {
@@ -132,13 +144,13 @@ a:hover {
 
 .tabcontent h3 {
     border-bottom: 2px var(--accentcolor) solid;
-    width:100%;
+    width: 100%;
 }
 
 .tabcontent p {
-   /* float: left;*/
+    /* float: left;*/
     margin-right: 1em;
-    text-decoration:none;
+    text-decoration: none;
 }
 
 /*.bio {
@@ -161,7 +173,7 @@ table th {
   }*/
 
 tr:nth-child(even) {
-    background-color:var(--hoverback);
+    background-color: var(--hoverback);
 }
 
 .flex {
@@ -180,7 +192,7 @@ tr:nth-child(even) {
 }
 
 .sidemenu-mobile {
-    display:none;
+    display: none;
     box-shadow: 1px 0px 5px var(--accentcolor);
     padding: 0.5em 0em;
     background-color: var(--secondbackground);
@@ -197,24 +209,30 @@ tr:nth-child(even) {
 }
 
 @keyframes fadeEffect {
-    from {opacity: 0;}
-    to {opacity: 1;}
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
-  @media screen and (max-width: 800px) {
+@media screen and (max-width: 800px) {
 
     .flex {
         flex-direction: column;
     }
 
-    .flex-container1, .flex-container2 {
+    .flex-container1,
+    .flex-container2 {
         max-width: 100%;
     }
 
     .sidemenu {
         display: none;
         margin-left: 0rem;
-        height:25rem;
+        height: 25rem;
         width: 100%;
         position: absolute;
         top: 0;
@@ -231,7 +249,7 @@ tr:nth-child(even) {
     h1 {
         text-align: center;
     }
-    
+
     .tabcontent {
         width: 100%;
         margin: 0rem 0em 0em 0em;
@@ -239,13 +257,15 @@ tr:nth-child(even) {
         padding: 0px 0px;
         overflow: hidden;
     }
+
     body {
         margin: 1em;
     }
+
     .switcher {
         position: relative;
     }
-  }
+}
 
 /*Pierwsza wersja klasyczna*/
 /*.sidemenu {
@@ -274,13 +294,14 @@ tr:nth-child(even) {
     padding: 6px 8px 6px 16px;
     text-decoration: none;
     font-size: 1em; */
-    /*color:var(--hoverback); */
-   /* display: block;
+/*color:var(--hoverback); */
+/* display: block;
     background-color: var(--accentcolor);
 }
 
 .sidemenu a:hover {
-    color:var(--hovertext); /*#f1f1f1;*//*
+    color:var(--hovertext); /*#f1f1f1;*/
+/*
     background-color: var(--hoverback);
 }
 
