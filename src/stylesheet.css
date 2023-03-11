@@ -84,7 +84,6 @@ button {
 
 button:hover {
     color: var(--hoverback);
-    /*#f1f1f1;*/
     background-color: var(--accentcolor);
 }
 
@@ -148,14 +147,9 @@ a:hover {
 }
 
 .tabcontent p {
-    /* float: left;*/
     margin-right: 1em;
     text-decoration: none;
 }
-
-/*.bio {
-    text-align: center;
-}*/
 
 .project {
     margin: 0em 2em 0em 15em;
@@ -167,10 +161,6 @@ table th {
     width: 10%;
     text-align: left;
 }
-
-/*th, td {
-    border-bottom: 1px solid var(--hoverback);
-  }*/
 
 tr:nth-child(even) {
     background-color: var(--hoverback);
@@ -266,53 +256,3 @@ tr:nth-child(even) {
         position: relative;
     }
 }
-
-/*Pierwsza wersja klasyczna*/
-/*.sidemenu {
-    height: 100%;
-    width: 15em;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: var(--secondbackground);
-    overflow: hidden;
-    padding-top: 1em;
-}
-
-.sidemenu img {
-    border-radius: 100%;
-    position: relative;
-    top: 0%;
-    left: 50%;
-    transform: translate(-50%, 0%);
-    border: solid;
-}
-
-
-.sidemenu a {
-    padding: 6px 8px 6px 16px;
-    text-decoration: none;
-    font-size: 1em; */
-/*color:var(--hoverback); */
-/* display: block;
-    background-color: var(--accentcolor);
-}
-
-.sidemenu a:hover {
-    color:var(--hovertext); /*#f1f1f1;*/
-/*
-    background-color: var(--hoverback);
-}
-
-.main {
-    margin: 0em 0em 0em 15em;
-    font-size: 1em;
-    padding: 0px 10px;
-}
-
-.project {
-    margin: 0em 2em 0em 15em;
-    font-size: 1em;
-    padding: 0px 10px;
-} */
