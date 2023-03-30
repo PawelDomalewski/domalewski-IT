@@ -181,7 +181,7 @@ tr:nth-child(even) {
     max-width: 50%;
 }
 
-.sidemenu-mobile {
+/*.sidemenu-mobile {
     display: none;
     box-shadow: 1px 0px 5px var(--accentcolor);
     padding: 0.5em 0em;
@@ -196,7 +196,7 @@ tr:nth-child(even) {
     transform: translate(-50%, 0%);
     border: solid;
     box-shadow: 1px 1px 5px var(--accentcolor);
-}
+}*/
 
 @keyframes fadeEffect {
     from {
@@ -220,20 +220,27 @@ tr:nth-child(even) {
     }
 
     .sidemenu {
-        display: none;
-        margin-left: 0rem;
-        height: 25rem;
-        width: 100%;
-        position: absolute;
-        top: 0;
-        background-color: var(--secondbackground);
-        overflow: hidden;
-        padding-top: 1em;
+        display: block;
         box-shadow: 1px 0px 5px var(--accentcolor);
+        padding: 0.5em 0em;
+        background-color: var(--secondbackground);
+        position: relative;
+        width: 100%;
+        margin: 0;
+    }
+
+    .sidemenu img {
+        border-radius: 100%;
+        position: relative;
+        top: 0%;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        border: solid;
+        box-shadow: 1px 1px 5px var(--accentcolor);
     }
 
     .sidemenu-mobile {
-        display: block;
+        display: none;
     }
 
     button {
