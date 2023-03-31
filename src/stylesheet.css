@@ -1,43 +1,40 @@
 :root,
 :root.light {
-    /*--mainbackground: #F2F1EF; /* głowny color tła na całą stronę */
-    /*--secondbackground: #D8CFD0; /* color tła mniejszych sekcji, boczne menu itp */
-    /*--accentcolor: #B1A6A4; /* kolor akcentu, napisów, tła przycisków */
-    /*--hoverback: #413F3D; /* color tła po hoverze */
-    /*--hovertext: #B1A6A4; /* color tekstu po hoverze, taki sam jak accentu*/
-    --mainbackground: #FfFffF;
-    /* głowny color tła na całą stronę */
-    --secondbackground: #f5f5f5;
-    /* color tła mniejszych sekcji, boczne menu itp */
-    --accentcolor: #2e3d4a;
-    /* kolor akcentu, napisów, tła przycisków */
-    --hoverback: #e1e1e1;
-    /* color tła po hoverze */
-    --hovertext: #000000;
-    /* color tekstu po hoverze, taki sam jak accentu */
+    --main-background: #ffffff;
+    --second-background: #f5f5f5;
+    --h2-background-color: #2e3d4a;
+    --button-bckgrnd-color: #e1e1e1;
+    --button-bckgrnd-color-hover:#2e3d4a;
+    --main-text-color: #2e3d4a;
+    --hover-text-color:#e1e1e1 ;
+    --h2-text-color: #e1e1e1 ;
+    --shadow-color: #2e3d4a;
+    --button-color-text: #2e3d4a;
+    --table-bth-color: #e1e1e1;
 }
 
 :root.dark {
-    --mainbackground: #000000;
-    /* głowny color tła na całą stronę */
-    --secondbackground: #1d1919;
-    /* color tła mniejszych sekcji, boczne menu itp */
-    --accentcolor: #777777;
-    /* kolor akcentu, napisów, tła przycisków */
-    --hoverback: #313131;
-    /* color tła po hoverze */
-    --hovertext: #777777;
-    /* color tekstu po hoverze, taki sam jak accentu */
+    --main-background: #1d2731;
+    --second-background: #0b3c5d;
+    --h2-background-color: #d9b310;
+    --button-bckgrnd-color: #1d2731;
+    --button-bckgrnd-color-hover:#d9b310;
+    --main-text-color: #e1e1e1;
+    --hover-text-color:#0b3c5d ;
+    --h2-text-color: #0b3c5d;
+    --shadow-color: #e1e1e1;
+    --button-color-text: #e1e1e1;
+    --table-bth-color: #0b3c5d;
 }
 
 * {
-    color: var(--accentcolor);
+    color: var(--main-text-color);
 }
 
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-color: var(--mainbackground);
-    color: var(--hoverback);
+    background-color: var(--main-background);
+    color: var(--main-text-color);
     margin: 1em;
     margin-top: auto;
 }
@@ -50,10 +47,10 @@ body {
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: var(--secondbackground);
+    background-color: var(--second-background);
     overflow: hidden;
     padding-top: 1em;
-    box-shadow: 1px 0px 5px var(--accentcolor);
+    box-shadow: 1px 0px 5px var(--shadow-color);
 }
 
 .sidemenu img {
@@ -63,7 +60,7 @@ body {
     left: 50%;
     transform: translate(-50%, 0%);
     border: solid;
-    box-shadow: 1px 1px 5px var(--accentcolor);
+    box-shadow: 1px 1px 5px var(--shadow-color);
 }
 
 
@@ -72,9 +69,9 @@ button {
     padding: 6px 8px 6px 16px;
     text-decoration: none;
     font-size: 1em;
-    color: var(--hovertext);
+    color: var(--button-color-text);
     display: block;
-    background-color: var(--hoverback);
+    background-color: var(--button-bckgrnd-color);
     border: none;
     outline: none;
     text-align: center;
@@ -83,13 +80,13 @@ button {
 }
 
 button:hover {
-    color: var(--hoverback);
-    background-color: var(--accentcolor);
+    color: var(--hover-text-color);
+    background-color: var(--button-bckgrnd-color-hover);
 }
 
 button.active {
-    background-color: var(--accentcolor);
-    color: var(--hoverback);
+    background-color: var(--button-bckgrnd-color-hover);
+    color: var(--hover-text-color);
 }
 
 .switcher {
@@ -112,13 +109,13 @@ button.active {
 
 a {
     text-decoration: none;
-    color: var(--hovertext);
+    color: var(--main-text-color);
     transition: 0.3s;
 }
 
 a:hover {
-    background-color: var(--accentcolor);
-    color: var(--hoverback);
+    background-color: var(--button-bckgrnd-color-hover);
+    color: var(--hover-text-color);
     padding: 3px 0px 3px 0px;
 }
 
@@ -132,17 +129,17 @@ a:hover {
 }
 
 .tabcontent h2 {
-    background-color: var(--accentcolor);
-    color: var(--hoverback);
+    background-color: var(--h2-background-color);
+    color: var(--h2-text-color);
     text-align: center;
     padding: 0.1em;
     max-width: 100%;
     display: block;
-    box-shadow: 4px 4px 5px var(--hoverback);
+    box-shadow: 4px 4px 5px var(--shadow-color);
 }
 
 .tabcontent h3 {
-    border-bottom: 2px var(--accentcolor) solid;
+    border-bottom: 2px var(--main-text-color) solid;
     width: 100%;
 }
 
@@ -163,7 +160,7 @@ table th {
 }
 
 tr:nth-child(even) {
-    background-color: var(--hoverback);
+    background-color: var(--table-bth-color);
 }
 
 .flex {
@@ -183,9 +180,9 @@ tr:nth-child(even) {
 
 .sidemenu-mobile {
     display: none;
-    box-shadow: 1px 0px 5px var(--accentcolor);
+    box-shadow: 1px 0px 5px var(--shadow-color);
     padding: 0.5em 0em;
-    background-color: var(--secondbackground);
+    background-color: var(--second-background);
 }
 
 .sidemenu-mobile img {
@@ -195,7 +192,7 @@ tr:nth-child(even) {
     left: 50%;
     transform: translate(-50%, 0%);
     border: solid;
-    box-shadow: 1px 1px 5px var(--accentcolor);
+    box-shadow: 1px 1px 5px var(--shadow-color);
 }
 
 @keyframes fadeEffect {
@@ -226,10 +223,10 @@ tr:nth-child(even) {
         width: 100%;
         position: absolute;
         top: 0;
-        background-color: var(--secondbackground);
+        background-color: var(--second-background);
         overflow: hidden;
         padding-top: 1em;
-        box-shadow: 1px 0px 5px var(--accentcolor);
+        box-shadow: 1px 0px 5px var(--shadow-color);
     }
 
     .sidemenu-mobile {
