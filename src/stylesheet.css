@@ -113,13 +113,12 @@ button.active {
 a {
     text-decoration: none;
     color: var(--hovertext);
-    transition: 0.3s;
 }
 
 a:hover {
     /*background-color: var(--accentcolor);
     color: var(--hoverback);*/
-    text-decoration: solid;
+    border-bottom: solid 2px var(--accentcolor);
     /*padding: 3px 0px 3px 0px;*/
 }
 
