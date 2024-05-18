@@ -18,15 +18,15 @@
 }
 
 :root.dark {
-    --mainbackground:#232b2b; #000000;
+    --mainbackground:#000000;
     /* głowny color tła na całą stronę */
-    --secondbackground:#232b2b; #1d1919;
+    --secondbackground:#1d1919;
     /* color tła mniejszych sekcji, boczne menu itp */
-    --accentcolor: #40e0d0; #777777;
+    --accentcolor:  #777777;
     /* kolor akcentu, napisów, tła przycisków */
-    --hoverback: #9f2b6b; #313131;
+    --hoverback: #313131;
     /* color tła po hoverze */
-    --hovertext: #40e0d0; #777777;
+    --hovertext: #777777;
     /* color tekstu po hoverze, taki sam jak accentu */
 }
 
