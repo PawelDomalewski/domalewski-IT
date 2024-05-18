@@ -117,9 +117,10 @@ a {
 }
 
 a:hover {
-    background-color: var(--accentcolor);
-    color: var(--hoverback);
-    padding: 3px 0px 3px 0px;
+    /*background-color: var(--accentcolor);
+    color: var(--hoverback);*/
+    text-decoration: solid;
+    /*padding: 3px 0px 3px 0px;*/
 }
 
 .tabcontent {
