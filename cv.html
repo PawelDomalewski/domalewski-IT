@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./src/stylesheet.css">
+    <meta name="description" content="Strona wizytówka i przedstawienie wizerunku">
+    <title>Domalewski IT</title>
+</head>
+
+<body>
+    <div class="sidemenu">
+        <img src="./upload/awatar_pawel.png" height="170em" width="170em" alt="Zdjęcie mężczyzny">
+        <h1 id="name">Paweł Domalewski</h1>
+        <button class="tablinks" onclick="openTab(event, 'myprojects')" id="defaultOpen">Moje Projekty</button>
+        <button class="tablinks" onclick="openTab(event, 'about')">O mnie</button>
+        <div class="switcher"><button class="theme-btn light" onclick="setTheme ('light')" title="Jasny tryb">Przełącz
+                na jasny motyw</button>
+            <button class="theme-btn dark" onclick="setTheme ('dark')" title="Ciemny tryb">Przełącz na ciemny
+                motyw</button>
+        </div>
+    </div><!--
+    <div class="sidemenu-mobile">
+        <img src="./upload/Man.jpg" height="170em" width="170em">
+        <h1 id="name">Paweł Domalewski</h1>
+        <button class="tablinks" onclick="openTab(event, 'about')" id="defaultOpen">O mnie</button>
+        <button class="tablinks" onclick="openTab(event, 'myprojects')">Moje Projekty</button>
+        <div class="switcher"><button class="theme-btn light" onclick="setTheme ('light')" title="Jasny tryb">Przełącz
+                na jasny motyw</button>
+            <button class="theme-btn dark" onclick="setTheme ('dark')" title="Ciemny tryb">Przełącz na ciemny
+                motyw</button>
+        </div>-->
+    </div>
+    <div id="about" class="tabcontent">
+        <h2>O mnie</h2>
+        <div class="flex">
+            <div class="flex-container2">
+                <h3>Paweł Domalewski</h3>
+                <p>Programowaniem interesuję się od drugiej połowy 2021 roku. Szybko się uczę i robię postępy.
+                    Potrafię przyznać się do błędu i go naprawić. Dbam o dobrą atmosferę w pracy i sumienne wykonuję
+                    swoje obowiązki. Chcę ciągle uczyć się nowych rzeczy i poznawać nowe rozwiązania w programowaniu.
+                    Jestem osobą niedosłyszącą, ale za to jestem dobrym słuchaczem.
+                </p>
+            </div>
+            <div class="flex-container1">
+                <h3 class="bio">Kontakt</h3>
+                <p>Mail: <a href="mailto: pawel@domalewski.it">pawel@domalewski.it</a></p>
+                <p>GitHub: <a href="https://github.com/PawelDomalewski">https://github.com/PawelDomalewski</a></p>
+            </div>
+        </div>
+        <h2>Doświadczenie zawodowe</h2>
+        <table>
+            <tr>
+                <th>Lata</th>
+                <th>Stanowisko</th>
+                <th>Firma</th>
+            </tr>
+            <tr>
+                <td>2022 - Obecnie</td>
+                <td>Specjalista ds. IT/Helpdesk</td>
+                <td>Mercenarius sp. z o. o. sp. kom.</td>
+            </tr>
+            <tr>
+                <td>2013 - 2022</td>
+                <td>Kierowca</td>
+                <td>Cukiernia An-Ka</td>
+            </tr>
+            <tr>
+                <td>2012</td>
+                <td>Kucharz</td>
+                <td>KFC</td>
+            </tr>
+            <tr>
+                <td>2011 - 2012</td>
+                <td>Agent Ubezpieczeniowy</td>
+                <td>Aegon</td>
+            </tr>
+        </table>
+        <h2>Edukacja</h2>
+        <table>
+            <tr>
+                <th>Lata</th>
+                <th>Szkoła</th>
+            </tr>
+            <tr>
+                <td>2022 - Obecnie</td>
+                <td>Samodzielnie: Python - CSS - Javascript</td>
+            </tr>
+            <tr>
+                <td>2009 - 2011</td>
+                <td>Wyższa Szkoła Zarządzania w Gdańsku</td>
+            </tr>
+            <tr>
+                <td>2007 - 2009</td>
+                <td>Liceum Ogólnokształcące nr 3 w Chełmie</td>
+            </tr>
+        </table>
+        <h2>Umiejętności</h2>
+        <div class="flex">
+            <div class="flex-container1">
+                <h3>Informatyczne</h3>
+                <table>
+                    <tr>
+                        <th>Język</th>
+                        <th>Poziom</th>
+                    </tr>
+                    <Tr>
+                        <td>Python</td>
+                        <td>podstawy</td>
+                    </Tr>
+                    <tr>
+                        <td>CSS</td>
+                        <td>zaawansowany</td>
+                    </tr>
+                    <tr>
+                        <td>Javascript</td>
+                        <td>podstawy</td>
+                    </Tr>
+                </table>
+            </div>
+            <div class="flex-container2">
+                <h3>Inne</h3>
+                <table>
+                    <tr>
+                        <th>Umięjętność</th>
+                        <th>Opis</th>
+                    </tr>
+                    <tr>
+                        <td>Prawo Jazdy</td>
+                        <td>Kategoria B</td>
+                    </tr>
+                    <tr>
+                        <td>Język angielski</td>
+                        <td>Poziom - komunikatywny</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div id="myprojects" class="tabcontent">
+        <h2>Moje projekty</h2>
+        <ol>
+            <h3>
+                <li>Strona zawolnosc.pl</li>
+            </h3>
+            <p>Link: <a href="https://zawolnosc.pl/">https://zawolnosc.pl/</a></p>
+            <p>Link: <a href="https://zawolnosc.pl/w-skrocie/">https://zawolnosc.pl/w-skrocie/</a></p>
+            <p>Link: <a href="https://zawolnosc.pl/w-skrocie2/">https://zawolnosc.pl/w-skrocie2/</a></p>
+            <p>Link: <a href="https://sybir.zawolnosc.pl/">https://sybir.zawolnosc.pl/</a></p>
+            <p>Link: <a href="https://solidarnosc.zawolnosc.pl/">https://solidarnosc.zawolnosc.pl/</a></p>
+            <p>Strony stworzone na zlecenie Za Wolność</p>
+            <h3>
+                <li>Strona olimpijka-fotografie</li>
+            </h3>
+            <p>Link: <a href="https://olimpia-fotografie.netlify.app">https://olimpia-fotografie.netlify.app</a></p>
+            <p>Strona typu blog/portfolio stworzona na zlecenie Olimpii Zyborowicz</p>
+            <h3>
+                <li>Strona Cukiernia An-Ka</li>
+            </h3>
+            <p>Link: <a href="https://an-ka.eu/">https://an-ka.eu/</a></p>
+            <p>Stron stworzona na zlecenie Cukiernia An-Ka</p>
+            <h3>
+                <li>Strona Kancelaria RIO</li>
+            </h3>
+            <p>Link: <a href="https://finansowybalans.pl/">https://finansowybalans.pl/</a></p>
+            <p>Link: <a href="https://upadloscpremium.pl/">https://upadloscpremium.pl/</a></p>
+            <p>Link: <a href="https://centrumbezdlugu.pl/">https://centrumbezdlugu.pl/</a></p>
+            <p>Stron stworzona na zlecenie Kancelarii RIO.</p>
+            <p>Strony powstałe pod nowe kampanie reklamowe kancelarii.</p>
+            <h3>
+                <li>Strona BIO</li>
+            </h3>
+            <p>Strona prezentująca informacje o mnie i o moich projektach.</p>
+            <p>Korzystając z JavaScriptu zrobiłem stronę na zasadzie zakładek które się otwiera z bocznego, stałego
+                menu, jednocześnie strona się
+                nie przeładowuje. <br>
+                W zakładce "O mnie", w sekcji "O mnie" oraz "Umiejętności" użyłem flexboxa, by zapewnić lepszą
+                responsywność.
+                Zakładka "O mnie" zawiera moje CV, natomiast zakładka "Moje Projekty" to lista, krótki opis i link
+                do
+                projektów nad którymi pracuję lub które już zakończyłem.
+            </p>
+            <h3>
+                <li>Strona o Pierwszej Kampanii DnD</li>
+            </h3>
+            <p>Link: <a href="https://paweldomalewski.github.io/dnd/">https://paweldomalewski.github.io/dnd/</a></p>
+            <p>Pierwsza strona stworzona przeze mnie.</p>
+            <p>Strona opisuje bohaterów kampanii RPG, opartej na systemie Dungeons & Dragons 5 Edycja.</p>
+            <p>Zawiera hero image, a poniżej menu które zawiera też dropdown menu oraz przykleja się na stale u góry
+                wraz przewijaniem strony. <br>Posiada też przycisk powrotu do góry, który pojawia się przy przewijaniu w
+                dół.<br>
+                Responsywność: na mniejszych ekranach znika pozioma sekcja z obrazkami postaci, które po kliknięciu
+                przenoszą do danego bohatera.
+            </p>
+            <h3>
+                <li>Strona o Drugiej Kampanii DnD</li>
+            </h3>
+            <p>Link: <a href="https://paweldomalewski.github.io/dnd2/">https://paweldomalewski.github.io/dnd2/</a></p>
+            <p>Druga stworzona przeze mnie strona.</p>
+            <p>Strona opisuje bohaterów z drugiej kampanii RPG, również opartej na systemienie D&D.</p>
+            <p>W tym projekcie zastosowałem flexboxa. Oprócz tego po kliknięciu na portret postaci wyświetli się modal
+                ze statystykami danej postaci, korzystam tutaj z pętli w JavaScript.
+            </p>
+        </ol>
+    </div>
+
+
+    <script>
+        function openTab(evt, tabName) {
+            // Declare all variables
+            var i, tabcontent, tablinks;
+
+            // Get all elements with class="tabcontent" and hide them
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+
+            // Get all elements with class="tablinks" and remove the class "active"
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+
+            // Show the current tab, and add an "active" class to the link that opened the tab
+            document.getElementById(tabName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+        // Get the element with id="defaultOpen" and click on it
+        document.getElementById("defaultOpen").click();
+
+        const setTheme = theme => document.documentElement.className = theme;
+    </script>
+</body>
+
+</html>
