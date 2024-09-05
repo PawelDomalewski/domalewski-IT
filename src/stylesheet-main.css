@@ -241,10 +241,11 @@ h2 {
     border-top: none;
     border-left: none;
     border-right: none;
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid #454545;
     background-color: #000;
     margin: 1.5rem;
     font-size: 1em;
+    padding: 0.5rem;
 }
 
 .form>input:focus {
@@ -283,6 +284,12 @@ h2 {
 .border {
     border: solid 1px #454545;
     padding: 1rem;
+    background-color: #00000050;
+}
+
+#contact {
+    background-image: url(/upload/milad-fakurian-9gpHxBH5Tc4-unsplash\ \(1\).jpg);
+    height: 70vh;
 }
 
 @media screen and (max-width: 700px) {
