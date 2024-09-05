@@ -229,3 +229,64 @@ h2 {
     text-decoration: none;
     color: white;
 }
+
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    line-height: 2rem;
+}
+
+.form>input {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid white;
+    background-color: #000;
+    margin: 1.5rem;
+    font-size: 1em;
+}
+
+.form>input:focus {
+    outline: none;
+}
+
+.form>input::placeholder {
+    color: white;
+}
+
+.form>p {
+    display: flex;
+    align-items: end;
+    padding: 1rem;
+    width: auto;
+    justify-content: center;
+}
+
+.form>p>button {
+    font-size: 1rem;
+}
+
+
+.contact {
+    display: flex;
+    width: 1220px;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact>div {
+    width: 50%;
+}
+
+.border {
+    border: solid 1px #454545;
+    padding: 1rem;
+}
+
+@media screen and (max-width: 700px) {
+    .contact>div {
+        width: 100%;
+    }
+}
