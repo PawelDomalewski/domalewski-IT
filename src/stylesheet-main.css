@@ -52,7 +52,7 @@ h2 {
 }
 
 .head-link, .head-link>a {
-    background-color: black;
+    background-color: transparent;
     color: var(--accentcolor-1);
     text-decoration: none;
 }
