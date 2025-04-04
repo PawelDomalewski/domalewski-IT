@@ -142,6 +142,7 @@ h2 {
 .flex-container1 {
     flex-grow: 1;
     max-width: 50%;
+    
 }
 
 .flex-container2 {
