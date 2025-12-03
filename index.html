@@ -45,20 +45,12 @@
                 <p>Strona dla Młynu Jaroszewicz<br>&nbsp;</p><a
                     href="https://mlynjaroszewicz.pl/">mlynjaroszewicz.pl</a>
             </div>
-            <div><img src="/upload/odsz.jpg" alt="strona odszkodowarka.pl">
-                <h3>Odszkodowarka</h3>
-                <p>Strona dla Odszkodowarki<br>&nbsp;</p><a href="https://odszkodowarka.pl/">odszkodowarka.pl</a>
-            </div>
+
             <div><img src="/upload/dziennikprawapamieci.webp" alt="strona dziennikprawapamieci.pl">
                 <h3>Dziennik Prawa Pamięci</h3>
                 <p>Blog dla Prawa Pamięci<br>&nbsp;</p><a
                     href="https://dziennikprawapamieci.pl">dziennikprawapamieci.pl</a>
-            </div>
-            <div><img src="/upload/zawolnoscplus.webp" alt="strona zawolnosc.pl">
-                <h3>Za Wolność</h3>
-                <p>Rozbudowana strona wykonana dla fundacji Za Wolność</p><a
-                    href="https://zawolnosc.pl">zawolnosc.pl</a>
-            </div>
+            </div>            
             <div><img src="/upload/finansowybalans.webp" alt="strona finansowybalans.pl">
                 <h3>Finansowy Balans</h3>
                 <p>Landing page wykonany dla Kancelarii RIO</p><a
@@ -72,6 +64,25 @@
                 <h3>Olimpia Zyborowicz</h3>
                 <p>Rozbudowana strona typu blog wykonana dla Olimpii</p><a
                     href="https://zyborowicz-fotografie.pl">zyborowicz-fotografie.pl</a>
+            </div>            
+            <div><img src="/upload/centrumbezdlugu.webp" alt="strona centrumbezdlugu.pl">
+                <h3>Centrum bez długu</h3>
+                <p>Strona dla Kancelarii RIO, pod kątem kampanii marketingowych</p><a
+                    href="https://centrumbezdlugu.pl/">centrumbezdlugu.pl</a>
+            </div>
+            <div><img src="/upload/zawolnoscplus.webp" alt="strona zawolnosc.pl">
+                <h3>Za Wolność</h3>
+                <p>Rozbudowana strona wykonana dla fundacji Za Wolność</p><a
+                    href="https://zawolnosc.pl">zawolnosc.pl</a>
+            </div>
+            <div><img src="/upload/solidarnosc.webp" alt="strona solidarnosc.zawolnosc.pl">
+                <h3>Za Wolność</h3>
+                <p>Strona dla fundacji Za Wolność, z myślą o działaczach Solidarności</p><a
+                    href="https://solidarnosc.zawolnosc.pl">solidarnosc.zawolnosc.pl</a>
+            </div>
+            <div><img src="/upload/odsz.jpg" alt="strona odszkodowarka.pl">
+                <h3>Odszkodowarka</h3>
+                <p>Strona dla Odszkodowarki<br>&nbsp;</p><a href="https://odszkodowarka.pl/">odszkodowarka.pl</a>
             </div>
             <div><img src="/upload/zawolnoscshort.webp" alt="strone zawolnosc.pl/w-skrocie">
                 <h3>Za Wolność</h3>
@@ -82,16 +93,6 @@
                 <h3>Za Wolność</h3>
                 <p>Strona dla fundacji Za Wolność, z myślą o sybirakach</p><a
                     href="https://sybir.zawolnosc.pl">sybir.zawolnosc.pl</a>
-            </div>
-            <div><img src="/upload/solidarnosc.webp" alt="strona solidarnosc.zawolnosc.pl">
-                <h3>Za Wolność</h3>
-                <p>Strona dla fundacji Za Wolność, z myślą o działaczach Solidarności</p><a
-                    href="https://solidarnosc.zawolnosc.pl">solidarnosc.zawolnosc.pl</a>
-            </div>
-            <div><img src="/upload/centrumbezdlugu.webp" alt="strona centrumbezdlugu.pl">
-                <h3>Centrum bez długu</h3>
-                <p>Strona dla Kancelarii RIO, pod kątem kampanii marketingowych</p><a
-                    href="https://centrumbezdlugu.pl/">centrumbezdlugu.pl</a>
             </div>
         </div>
         <div class="projects-counter">
@@ -118,115 +119,115 @@
         <p><a href="https://domalewski.it/">&#9400; Copyrights by Domalewski IT</a></p>
     </section>
     <script>
-// Filtrowanie projektów
-document.addEventListener('DOMContentLoaded', function() {
-    const filterButtons = document.querySelectorAll('.filter-btn');
-    const projectCards = document.querySelectorAll('.cards > div');
-    const counterNumber = document.querySelector('.counter-number');
-    
-    // Kategorie dla każdego projektu
-    const categories = {
-        'zdrowywybor.mlynleczyca.pl': 'business',
-        'mlynjaroszewicz.pl': 'business',
-        'odszkodowarka.pl': 'business',
-        'dziennikprawapamieci.pl': 'blog',
-        'zawolnosc.pl': 'business',
-        'zawolnosc.pl/w-skrocie/': 'business',
-        'finansowybalans.pl': 'landing',
-        'an-ka.eu': 'landing',
-        'zyborowicz-fotografie.pl': 'blog',
-        'sybir.zawolnosc.pl': 'business',
-        'solidarnosc.zawolnosc.pl': 'business',
-        'centrumbezdlugu.pl': 'landing'
-    };
-    
-    // Dodajemy atrybuty data-category do kart
-    projectCards.forEach(card => {
-        const link = card.querySelector('a');
-        if (link) {
-            let href = link.href;
-            // Usuń protokół i parametr
-            href = href.replace('https://', '').replace('http://', '').split('/')[0];
-            const category = categories[href] || 'business';
-            card.setAttribute('data-category', category);
-        }
-    });
-    
-    // Aktualizuj licznik
-    function updateCounter(filter) {
-        if (filter === 'all') {
-            counterNumber.textContent = projectCards.length;
-        } else {
-            const count = Array.from(projectCards).filter(card => 
-                card.getAttribute('data-category') === filter
-            ).length;
-            counterNumber.textContent = count;
-        }
-    }
-    
-    // Obsługa przycisków filtrowania
-    filterButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            // Usuń klasę active z wszystkich przycisków
-            filterButtons.forEach(btn => btn.classList.remove('active'));
-            // Dodaj klasę active do klikniętego przycisku
-            button.classList.add('active');
-            
-            const filter = button.getAttribute('data-filter');
-            
-            // Filtruj karty z animacją
-            projectCards.forEach((card, index) => {
-                const category = card.getAttribute('data-category');
-                
-                if (filter === 'all' || category === filter) {
-                    // Animacja pojawiania się
-                    card.style.display = 'flex';
-                    card.style.animation = 'none';
-                    setTimeout(() => {
-                        card.style.animation = `fadeInUp 0.5s ease forwards ${index * 0.05}s`;
-                    }, 10);
-                } else {
-                    card.style.animation = 'none';
-                    setTimeout(() => {
-                        card.style.display = 'none';
-                    }, 300);
+        // Filtrowanie projektów
+        document.addEventListener('DOMContentLoaded', function () {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const projectCards = document.querySelectorAll('.cards > div');
+            const counterNumber = document.querySelector('.counter-number');
+
+            // Kategorie dla każdego projektu
+            const categories = {
+                'zdrowywybor.mlynleczyca.pl': 'business',
+                'mlynjaroszewicz.pl': 'business',
+                'odszkodowarka.pl': 'business',
+                'dziennikprawapamieci.pl': 'blog',
+                'zawolnosc.pl': 'business',
+                'zawolnosc.pl/w-skrocie/': 'business',
+                'finansowybalans.pl': 'landing',
+                'an-ka.eu': 'landing',
+                'zyborowicz-fotografie.pl': 'blog',
+                'sybir.zawolnosc.pl': 'business',
+                'solidarnosc.zawolnosc.pl': 'business',
+                'centrumbezdlugu.pl': 'landing'
+            };
+
+            // Dodajemy atrybuty data-category do kart
+            projectCards.forEach(card => {
+                const link = card.querySelector('a');
+                if (link) {
+                    let href = link.href;
+                    // Usuń protokół i parametr
+                    href = href.replace('https://', '').replace('http://', '').split('/')[0];
+                    const category = categories[href] || 'business';
+                    card.setAttribute('data-category', category);
                 }
             });
-            
+
             // Aktualizuj licznik
-            updateCounter(filter);
+            function updateCounter(filter) {
+                if (filter === 'all') {
+                    counterNumber.textContent = projectCards.length;
+                } else {
+                    const count = Array.from(projectCards).filter(card =>
+                        card.getAttribute('data-category') === filter
+                    ).length;
+                    counterNumber.textContent = count;
+                }
+            }
+
+            // Obsługa przycisków filtrowania
+            filterButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    // Usuń klasę active z wszystkich przycisków
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    // Dodaj klasę active do klikniętego przycisku
+                    button.classList.add('active');
+
+                    const filter = button.getAttribute('data-filter');
+
+                    // Filtruj karty z animacją
+                    projectCards.forEach((card, index) => {
+                        const category = card.getAttribute('data-category');
+
+                        if (filter === 'all' || category === filter) {
+                            // Animacja pojawiania się
+                            card.style.display = 'flex';
+                            card.style.animation = 'none';
+                            setTimeout(() => {
+                                card.style.animation = `fadeInUp 0.5s ease forwards ${index * 0.05}s`;
+                            }, 10);
+                        } else {
+                            card.style.animation = 'none';
+                            setTimeout(() => {
+                                card.style.display = 'none';
+                            }, 300);
+                        }
+                    });
+
+                    // Aktualizuj licznik
+                    updateCounter(filter);
+                });
+            });
+
+            // Inicjalizuj licznik
+            updateCounter('all');
+
+            // Dodaj efekt paralaksy dla obrazków (opcjonalny)
+            const cards = document.querySelectorAll('.cards > div');
+            cards.forEach(card => {
+                const img = card.querySelector('img');
+                if (img) {
+                    card.addEventListener('mousemove', (e) => {
+                        const rect = card.getBoundingClientRect();
+                        const x = e.clientX - rect.left;
+                        const y = e.clientY - rect.top;
+
+                        const centerX = rect.width / 2;
+                        const centerY = rect.height / 2;
+
+                        const rotateY = (x - centerX) / 25;
+                        const rotateX = (centerY - y) / 25;
+
+                        card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateZ(10px)`;
+                    });
+
+                    card.addEventListener('mouseleave', () => {
+                        card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) translateZ(0)';
+                    });
+                }
+            });
         });
-    });
-    
-    // Inicjalizuj licznik
-    updateCounter('all');
-    
-    // Dodaj efekt paralaksy dla obrazków (opcjonalny)
-    const cards = document.querySelectorAll('.cards > div');
-    cards.forEach(card => {
-        const img = card.querySelector('img');
-        if (img) {
-            card.addEventListener('mousemove', (e) => {
-                const rect = card.getBoundingClientRect();
-                const x = e.clientX - rect.left;
-                const y = e.clientY - rect.top;
-                
-                const centerX = rect.width / 2;
-                const centerY = rect.height / 2;
-                
-                const rotateY = (x - centerX) / 25;
-                const rotateX = (centerY - y) / 25;
-                
-                card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateZ(10px)`;
-            });
-            
-            card.addEventListener('mouseleave', () => {
-                card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) translateZ(0)';
-            });
-        }
-    });
-});
-</script>
+    </script>
 </body>
 
 </html>
