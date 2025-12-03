@@ -312,7 +312,7 @@ h2 {
 }
 
 /* ==================== */
-/* Sekcja projektów - karty rozwijane */
+/* Sekcja projektów - ulepszenia */
 /* ==================== */
 
 .realizacje {
@@ -387,7 +387,7 @@ h2 {
     box-shadow: 0 0 15px rgba(0, 255, 213, 0.3);
 }
 
-/* Grid z projektami - karty rozwijane */
+/* Grid z projektami - nowy layout */
 .cards {
     max-width: 1220px;
     margin: 0 auto;
@@ -401,96 +401,99 @@ h2 {
     background-color: #111;
     border-radius: 8px;
     overflow: hidden;
-    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     border: 1px solid #454545;
     position: relative;
-    height: 250px; /* Stała wysokość dla złożonej karty */
+    height: 100%;
     display: flex;
     flex-direction: column;
     backdrop-filter: blur(10px);
 }
 
-/* Stan rozłożony karty */
 .cards>div:hover {
-    height: 400px; /* Wysokość po rozwinięciu */
     transform: translateY(-10px);
     border-color: #00ffd5;
-    box-shadow: 0 10px 25px rgba(0, 255, 213, 0.2);
+    box-shadow: 0 10px 25px rgba(0, 255, 213, 0.15);
 }
 
-/* Kontener obrazka */
+/* Kontener obrazka z efektem */
 .cards>div img {
     width: 100%;
     height: 200px;
     object-fit: cover;
-    transition: all 0.5s ease;
+    transition: transform 0.6s ease;
     display: block;
 }
 
-/* Zmniejszamy obrazek po najechaniu, żeby zrobić miejsce na opis */
 .cards>div:hover img {
-    height: 180px;
-    filter: brightness(0.8);
+    transform: scale(1.08);
 }
 
-/* Overlay z tytułem na obrazku */
-.image-overlay {
+/* Overlay na obrazku */
+.cards>div::before {
+    content: '';
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 200px;
-    background: linear-gradient(to bottom, transparent 30%, rgba(0, 0, 0, 0.9));
-    display: flex;
-    align-items: flex-end;
-    padding: 1.5rem;
-    box-sizing: border-box;
-    z-index: 2;
-}
-
-.cards>div h3 {
-    color: var(--accentcolor-1);
-    font-size: 1.4rem;
-    font-weight: 600;
-    margin: 0;
-    text-align: left;
-    letter-spacing: 1px;
-    transition: all 0.3s ease;
-}
-
-/* Treść karty (opis i link) - ukryta początkowo */
-.card-content {
-    padding: 1.5rem;
+    background: linear-gradient(to bottom, transparent 50%, rgba(0, 0, 0, 0.9));
     opacity: 0;
-    transform: translateY(20px);
-    transition: all 0.4s ease 0.1s;
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    height: 0;
-    overflow: hidden;
+    transition: opacity 0.4s ease;
+    z-index: 1;
 }
 
-.cards>div:hover .card-content {
+.cards>div:hover::before {
     opacity: 1;
-    transform: translateY(0);
-    height: auto;
 }
 
-.card-content p {
+/* Tekst "Zobacz projekt" pojawia się na hover */
+.cards>div::after {
+    content: 'ZOBACZ PROJEKT →';
+    position: absolute;
+    top: 160px;
+    left: 50%;
+    transform: translateX(-50%) translateY(20px);
+    color: #00ffd5;
+    font-weight: 600;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 10px 20px;
+    border-radius: 4px;
+    opacity: 0;
+    transition: all 0.4s ease;
+    z-index: 2;
+    font-size: 0.85rem;
+    white-space: nowrap;
+    letter-spacing: 1px;
+    border: 1px solid #00ffd5;
+}
+
+.cards>div:hover::after {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
+
+/* Treść karty */
+.cards>div h3 {
+    margin: 1.2rem 1.2rem 0.5rem;
+    color: var(--accentcolor-1);
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.cards>div p {
+    margin: 0 1.2rem;
     color: #aaa;
+    flex-grow: 1;
     font-size: 0.95rem;
     line-height: 1.6;
-    margin: 0 0 1.5rem 0;
-    text-align: left;
-    flex-grow: 1;
 }
 
-.card-content a {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0.8rem 1.5rem;
+.cards>div a {
+    display: block;
+    margin: 1.2rem;
+    padding: 12px 0;
+    text-align: center;
     background-color: transparent;
     color: var(--accentcolor-1);
     border: 1px solid #454545;
@@ -502,10 +505,9 @@ h2 {
     font-size: 0.9rem;
     position: relative;
     overflow: hidden;
-    align-self: flex-start;
 }
 
-.card-content a::before {
+.cards>div a::before {
     content: '';
     position: absolute;
     top: 0;
@@ -516,48 +518,15 @@ h2 {
     transition: left 0.5s ease;
 }
 
-.card-content a:hover::before {
+.cards>div a:hover::before {
     left: 100%;
 }
 
-.card-content a:hover {
+.cards>div a:hover {
     border-color: #00ffd5;
     color: #00ffd5;
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(0, 255, 213, 0.1);
-}
-
-/* Ikona strzałki w linku */
-.card-content a::after {
-    content: ' →';
-    margin-left: 5px;
-    transition: transform 0.3s ease;
-}
-
-.card-content a:hover::after {
-    transform: translateX(5px);
-}
-
-/* Indicator pokazujący, że karta jest interaktywna */
-.card-indicator {
-    position: absolute;
-    bottom: 15px;
-    right: 15px;
-    color: #00ffd5;
-    font-size: 0.8rem;
-    opacity: 0;
-    transform: translateY(10px);
-    transition: all 0.3s ease;
-    z-index: 3;
-    background: rgba(0, 0, 0, 0.7);
-    padding: 5px 10px;
-    border-radius: 15px;
-    border: 1px solid rgba(0, 255, 213, 0.3);
-}
-
-.cards>div:hover .card-indicator {
-    opacity: 1;
-    transform: translateY(0);
 }
 
 /* ==================== */
@@ -572,6 +541,15 @@ h2 {
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+@keyframes glowPulse {
+    0%, 100% {
+        box-shadow: 0 0 5px rgba(0, 255, 213, 0.2);
+    }
+    50% {
+        box-shadow: 0 0 20px rgba(0, 255, 213, 0.4);
     }
 }
 
@@ -645,23 +623,7 @@ h2 {
     }
     
     .cards>div {
-        height: 220px;
-    }
-    
-    .cards>div:hover {
-        height: 380px;
-    }
-    
-    .cards>div img {
-        height: 180px;
-    }
-    
-    .cards>div:hover img {
-        height: 160px;
-    }
-    
-    .image-overlay {
-        height: 180px;
+        max-width: 100%;
     }
 }
 
@@ -679,15 +641,7 @@ h2 {
         font-size: 1.2rem;
     }
     
-    .card-content p {
+    .cards>div p {
         font-size: 0.9rem;
-    }
-    
-    .cards>div {
-        height: 200px;
-    }
-    
-    .cards>div:hover {
-        height: 360px;
     }
 }
