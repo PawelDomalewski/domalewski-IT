@@ -324,7 +324,7 @@ h2 {
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 3rem;
-    color: var(--accentcolor);
+    color: var(--accentcolor-1);
     position: relative;
 }
 
@@ -336,7 +336,7 @@ h2 {
     transform: translateX(-50%);
     width: 80px;
     height: 3px;
-    background-color: var(--accentcolor);
+    background-color: var(--accentcolor-1);
 }
 
 /* Grid z projektami - nowy layout */
@@ -405,7 +405,7 @@ h2 {
     transform: translateX(-50%);
     color: white;
     font-weight: 600;
-    background-color: var(--accentcolor);
+    background-color: var(--accentcolor-1);
     padding: 8px 16px;
     border-radius: 20px;
     opacity: 0;
@@ -423,7 +423,7 @@ h2 {
 /* Treść karty */
 .cards > div h3 {
     margin: 1.2rem 1.2rem 0.5rem;
-    color: var(--accentcolor);
+    color: var(--accentcolor-1);
     font-size: 1.3rem;
 }
 
@@ -441,8 +441,8 @@ h2 {
     padding: 10px 0;
     text-align: center;
     background-color: transparent;
-    color: var(--accentcolor);
-    border: 2px solid var(--accentcolor);
+    color: var(--accentcolor-1);
+    border: 2px solid var(--accentcolor-1);
     border-radius: 6px;
     font-weight: 600;
     transition: all 0.3s ease;
@@ -450,9 +450,9 @@ h2 {
 }
 
 .cards > div a:hover {
-    background-color: var(--accentcolor);
+    background-color: var(--accentcolor-1);
     color: var(--mainbackground);
-    border-color: var(--accentcolor);
+    border-color: var(--accentcolor-1);
     transform: scale(1.03);
 }
 
@@ -471,8 +471,8 @@ h2 {
 .filter-btn {
     padding: 0.5rem 1.5rem;
     background-color: transparent;
-    border: 2px solid var(--accentcolor);
-    color: var(--accentcolor);
+    border: 2px solid var(--accentcolor-1);
+    color: var(--accentcolor-1);
     border-radius: 25px;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -481,7 +481,7 @@ h2 {
 
 .filter-btn:hover,
 .filter-btn.active {
-    background-color: var(--accentcolor);
+    background-color: var(--accentcolor-1);
     color: var(--mainbackground);
 }
 
