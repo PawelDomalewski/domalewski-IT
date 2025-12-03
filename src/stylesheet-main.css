@@ -435,7 +435,7 @@ h2 {
 }
 
 .cards > div a,
-btn-1 {
+.btn-1 {
     display: block;
     margin: 1.2rem;
     padding: 10px 0;
@@ -450,7 +450,7 @@ btn-1 {
 }
 
 .cards > div a:hover,
-btn-1:hover {
+.btn-1:hover {
     background-color: var(--accentcolor-1);
     color: var(--mainbackground);
     border-color: var(--accentcolor-1);
