@@ -434,7 +434,8 @@ h2 {
     line-height: 1.5;
 }
 
-.cards > div a {
+.cards > div a,
+btn-1 {
     display: block;
     margin: 1.2rem;
     padding: 10px 0;
@@ -448,7 +449,8 @@ h2 {
     text-decoration: none;
 }
 
-.cards > div a:hover {
+.cards > div a:hover,
+btn-1:hover {
     background-color: var(--accentcolor-1);
     color: var(--mainbackground);
     border-color: var(--accentcolor-1);
