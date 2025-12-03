@@ -403,7 +403,7 @@ h2 {
     top: 160px;
     left: 50%;
     transform: translateX(-50%);
-    color: white;
+    color: black;
     font-weight: 600;
     background-color: var(--accentcolor-1);
     padding: 8px 16px;
@@ -429,7 +429,7 @@ h2 {
 
 .cards > div p {
     margin: 0 1.2rem;
-    color: #666;
+    color: #ffff;
     flex-grow: 1;
     font-size: 0.95rem;
     line-height: 1.5;
