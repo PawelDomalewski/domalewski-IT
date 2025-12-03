@@ -28,6 +28,12 @@
     <div id="projects" class="content realizacje">
         <h2>Moje projekty</h2>
         <!-- image 320 width 180 height -->
+        <div class="filters">
+            <button class="filter-btn active" data-filter="all">Wszystkie</button>
+            <button class="filter-btn" data-filter="landing">Landing Pages</button>
+            <button class="filter-btn" data-filter="business">Strony biznesowe</button>
+            <button class="filter-btn" data-filter="blog">Blogi</button>
+        </div>
         <div class="cards">
             <div><img src="/upload/zdrowymaka.jpg" alt="strona zdrowywybor.mlynleczyca.pl">
                 <h3>Zdrowy Wybór</h3>
@@ -41,8 +47,7 @@
             </div>
             <div><img src="/upload/odsz.jpg" alt="strona odszkodowarka.pl">
                 <h3>Odszkodowarka</h3>
-                <p>Strona dla Odszkodowarki<br>&nbsp;</p><a
-                    href="https://odszkodowarka.pl/">odszkodowarka.pl</a>
+                <p>Strona dla Odszkodowarki<br>&nbsp;</p><a href="https://odszkodowarka.pl/">odszkodowarka.pl</a>
             </div>
             <div><img src="/upload/dziennikprawapamieci.webp" alt="strona dziennikprawapamieci.pl">
                 <h3>Dziennik Prawa Pamięci</h3>
@@ -90,25 +95,87 @@
             </div>
         </div>
     </div>
-        <div id="contact" class="content" style="display: flex; justify-content: center;">
-            <div class="contact">
-                <div class="border">
-                    <h2>Skontaktuj się ze mną</h2>
-                    <a href="mailto:pawel@domalewski.it">pawel@domalewski.it</a>
-                
-                    <form class="form" name="kontakt" netlify action="/dziekuje">
-                        <input name="imię" type="text" placeholder="Imię i Nazwisko/Firma" required></input>
-                        <input name="email" type="e-mail" placeholder="Adres e-mail" required></input>
-                        <input name="wiadomość" type="text" placeholder="Wiadomość"></input>
-                        <p><button type="submit" class="glow-on-hover">Wyślij</button></p>
-                    </form>
-                </div>
+    <div id="contact" class="content" style="display: flex; justify-content: center;">
+        <div class="contact">
+            <div class="border">
+                <h2>Skontaktuj się ze mną</h2>
+                <a href="mailto:pawel@domalewski.it">pawel@domalewski.it</a>
+
+                <form class="form" name="kontakt" netlify action="/dziekuje">
+                    <input name="imię" type="text" placeholder="Imię i Nazwisko/Firma" required></input>
+                    <input name="email" type="e-mail" placeholder="Adres e-mail" required></input>
+                    <input name="wiadomość" type="text" placeholder="Wiadomość"></input>
+                    <p><button type="submit" class="glow-on-hover">Wyślij</button></p>
+                </form>
             </div>
         </div>
-    
+    </div>
+
     <section class="autor">
         <p><a href="https://domalewski.it/">&#9400; Copyrights by Domalewski IT</a></p>
     </section>
+    <script>
+// Filtrowanie projektów
+document.addEventListener('DOMContentLoaded', function() {
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const projectCards = document.querySelectorAll('.cards > div');
+    
+    // Dodajemy atrybuty data-category do kart
+    const categories = {
+        'zdrowywybor.mlynleczyca.pl': 'business',
+        'mlynjaroszewicz.pl': 'business',
+        'odszkodowarka.pl': 'business',
+        'dziennikprawapamieci.pl': 'blog',
+        'zawolnosc.pl': 'business',
+        'finansowybalans.pl': 'landing',
+        'an-ka.eu': 'landing',
+        'zyborowicz-fotografie.pl': 'blog',
+        'sybir.zawolnosc.pl': 'business',
+        'solidarnosc.zawolnosc.pl': 'business',
+        'centrumbezdlugu.pl': 'landing'
+    };
+    
+    projectCards.forEach(card => {
+        const link = card.querySelector('a').href.replace('https://', '').replace('http://', '').split('/')[0];
+        const category = categories[link] || 'business';
+        card.setAttribute('data-category', category);
+    });
+    
+    // Obsługa przycisków filtrowania
+    filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            // Usuń klasę active z wszystkich przycisków
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            // Dodaj klasę active do klikniętego przycisku
+            button.classList.add('active');
+            
+            const filter = button.getAttribute('data-filter');
+            
+            // Filtruj karty
+            projectCards.forEach(card => {
+                const category = card.getAttribute('data-category');
+                
+                if (filter === 'all' || category === filter) {
+                    card.style.display = 'flex';
+                    // Dodaj animację pojawiania się
+                    card.style.animation = 'fadeInUp 0.5s ease forwards';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
+    });
+    
+    // Efekt paralaksy dla sekcji projektów (opcjonalny)
+    window.addEventListener('scroll', () => {
+        const realizacje = document.querySelector('.realizacje');
+        const scrolled = window.pageYOffset;
+        const rate = scrolled * -0.5;
+        
+        realizacje.style.backgroundPosition = `0px ${rate}px`;
+    });
+});
+</script>
 </body>
 
 </html>
