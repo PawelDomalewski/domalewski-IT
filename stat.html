@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,24 +19,24 @@
             --light-color: #ecf0f1;
             --dark-color: #2c3e50;
         }
-        
+
         body {
             background-color: #f8f9fa;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
-        
+
         .navbar-brand {
             font-weight: 700;
             color: var(--primary-color) !important;
         }
-        
+
         .card {
             border: none;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             margin-bottom: 20px;
             border-radius: 10px;
         }
-        
+
         .card-header {
             background-color: var(--primary-color);
             color: white;
@@ -43,17 +44,17 @@
             border-radius: 10px 10px 0 0 !important;
             padding: 15px 20px;
         }
-        
+
         .btn-primary {
             background-color: var(--secondary-color);
             border-color: var(--secondary-color);
         }
-        
+
         .btn-primary:hover {
             background-color: #2980b9;
             border-color: #2980b9;
         }
-        
+
         .file-upload-area {
             border: 3px dashed #ccc;
             border-radius: 10px;
@@ -62,22 +63,22 @@
             transition: all 0.3s;
             background-color: white;
         }
-        
+
         .file-upload-area.drag-over {
             border-color: var(--secondary-color);
             background-color: rgba(52, 152, 219, 0.05);
         }
-        
+
         .file-upload-area i {
             font-size: 48px;
             color: var(--secondary-color);
             margin-bottom: 15px;
         }
-        
+
         #fileInput {
             display: none;
         }
-        
+
         .file-label {
             cursor: pointer;
             padding: 10px 25px;
@@ -88,138 +89,138 @@
             margin-top: 10px;
             transition: background-color 0.3s;
         }
-        
+
         .file-label:hover {
             background-color: #2980b9;
         }
-        
+
         .status-badge {
             padding: 5px 10px;
             border-radius: 20px;
             font-size: 0.85em;
             font-weight: 600;
         }
-        
+
         .badge-good {
             background-color: #d4edda;
             color: #155724;
         }
-        
+
         .badge-medium {
             background-color: #fff3cd;
             color: #856404;
         }
-        
+
         .badge-bad {
             background-color: #f8d7da;
             color: #721c24;
         }
-        
+
         .badge-none {
             background-color: #e2e3e5;
             color: #383d41;
         }
-        
+
         table.dataTable thead th {
             background-color: var(--primary-color);
             color: white;
             border-bottom: none;
         }
-        
+
         table.dataTable tbody tr {
             transition: background-color 0.2s;
         }
-        
+
         table.dataTable tbody tr:hover {
             background-color: rgba(52, 152, 219, 0.05);
         }
-        
+
         .dataTables_wrapper .dataTables_filter input {
             border: 1px solid #ddd;
             border-radius: 4px;
             padding: 5px 10px;
         }
-        
+
         .dataTables_wrapper .dataTables_length select {
             border: 1px solid #ddd;
             border-radius: 4px;
             padding: 5px;
         }
-        
+
         .summary-card {
             text-align: center;
             padding: 15px;
             border-radius: 8px;
             margin-bottom: 15px;
         }
-        
+
         .summary-good {
             background-color: #d4edda;
             border-left: 4px solid #28a745;
         }
-        
+
         .summary-medium {
             background-color: #fff3cd;
             border-left: 4px solid #ffc107;
         }
-        
+
         .summary-bad {
             background-color: #f8d7da;
             border-left: 4px solid #dc3545;
         }
-        
+
         .summary-count {
             font-size: 24px;
             font-weight: 700;
             margin-bottom: 5px;
         }
-        
+
         .summary-label {
             font-size: 14px;
             color: #666;
         }
-        
+
         .spinner-border {
             width: 3rem;
             height: 3rem;
         }
-        
+
         .tab-content {
             padding-top: 20px;
         }
-        
+
         .nav-tabs .nav-link {
             color: var(--primary-color);
             font-weight: 500;
         }
-        
+
         .nav-tabs .nav-link.active {
             color: var(--secondary-color);
             font-weight: 600;
             border-bottom: 3px solid var(--secondary-color);
         }
-        
+
         .stats-row {
             margin-bottom: 20px;
         }
-        
+
         .export-btn {
             margin-left: 10px;
         }
-        
+
         .processing-overlay {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0,0,0,0.7);
+            background: rgba(0, 0, 0, 0.7);
             z-index: 9999;
             display: none;
             justify-content: center;
             align-items: center;
         }
-        
+
         .processing-content {
             background: white;
             padding: 30px;
@@ -227,120 +228,121 @@
             text-align: center;
             max-width: 500px;
         }
-        
+
         .aggr-card {
             cursor: pointer;
             transition: transform 0.2s, box-shadow 0.2s;
         }
-        
+
         .aggr-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
         }
-        
+
         .metric-value {
             font-size: 28px;
             font-weight: 700;
             margin-bottom: 5px;
         }
-        
+
         .metric-label {
             font-size: 14px;
             color: #666;
             margin-bottom: 5px;
         }
-        
+
         .metric-change {
             font-size: 12px;
         }
-        
+
         .metric-up {
             color: #28a745;
         }
-        
+
         .metric-down {
             color: #dc3545;
         }
-        
+
         .metric-neutral {
             color: #6c757d;
         }
-        
+
         .aggr-table-row:hover {
             background-color: #f8f9fa;
             cursor: pointer;
         }
-        
+
         .filter-section {
             background-color: #f8f9fa;
             border-radius: 8px;
             padding: 15px;
             margin-bottom: 20px;
         }
-        
+
         .quality-bar {
             height: 8px;
             border-radius: 4px;
             overflow: hidden;
             margin-bottom: 5px;
         }
-        
+
         .quality-bar-good {
             background-color: #28a745;
         }
-        
+
         .quality-bar-medium {
             background-color: #ffc107;
         }
-        
+
         .quality-bar-bad {
             background-color: #dc3545;
         }
-        
+
         .quality-bar-none {
             background-color: #6c757d;
         }
-        
+
         .scrollable-table {
             max-height: 400px;
             overflow-y: auto;
         }
-        
+
         .campaign-quality-row td {
             vertical-align: middle;
         }
-        
+
         .date-filter-section {
             background-color: #e9ecef;
             border-radius: 8px;
             padding: 15px;
             margin-bottom: 20px;
         }
-        
+
         .flatpickr-input {
             background-color: white !important;
         }
-        
+
         @media (max-width: 768px) {
             .table-responsive {
                 font-size: 0.85rem;
             }
-            
+
             .dataTables_wrapper .dataTables_length,
             .dataTables_wrapper .dataTables_filter {
                 margin-bottom: 10px;
             }
-            
+
             .metric-value {
                 font-size: 22px;
             }
-            
-            .date-filter-section .row > div {
+
+            .date-filter-section .row>div {
                 margin-bottom: 10px;
             }
         }
     </style>
 </head>
+
 <body>
     <!-- Overlay do przetwarzania dużych plików -->
     <div class="processing-overlay" id="largeFileOverlay">
@@ -349,12 +351,13 @@
             <h5>Przetwarzanie dużego pliku...</h5>
             <p id="processingStatus">To może zająć kilka sekund</p>
             <div class="progress mt-3" style="height: 10px;">
-                <div id="largeProgressBar" class="progress-bar progress-bar-striped progress-bar-animated" style="width: 0%"></div>
+                <div id="largeProgressBar" class="progress-bar progress-bar-striped progress-bar-animated"
+                    style="width: 0%"></div>
             </div>
             <div class="mt-2" id="processedRows">0 / 0 wierszy</div>
         </div>
     </div>
-    
+
     <!-- Nawigacja -->
     <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
         <div class="container">
@@ -413,7 +416,7 @@
                                 <p class="mt-3 text-muted">Obsługiwane formaty: .xls, .xlsx, .csv</p>
                                 <p class="text-muted">Plik powinien mieć strukturę podobną do załączonego przykładu</p>
                             </div>
-                            
+
                             <div class="mt-4">
                                 <h5>Jak działa analiza?</h5>
                                 <ul>
@@ -429,7 +432,7 @@
                 </div>
             </div>
         </div>
-        
+
         <!-- Sekcja podsumowania (początkowo ukryta) -->
         <div id="summarySection" style="display: none;">
             <div class="card">
@@ -442,6 +445,14 @@
                         <button class="btn btn-sm btn-outline-primary" id="exportSummary">
                             <i class="fas fa-file-excel me-1"></i>Eksportuj podsumowanie
                         </button>
+                        <button class="btn btn-sm btn-outline-success export-btn" id="shareReport">
+                            <i class="fas fa-share-alt me-1"></i>Udostępnij
+                        </button>
+                        <span class="ms-2 small" id="shareStatus"></span>
+                        <div class="mt-2">
+                            <a id="shareLink" href="#" target="_blank" style="display:none;"></a>
+                        </div>
+
                         <button class="btn btn-sm btn-outline-secondary" id="newFileFromSummary">
                             <i class="fas fa-plus me-1"></i>Nowy plik
                         </button>
@@ -454,15 +465,18 @@
                         <div class="row align-items-end">
                             <div class="col-md-3">
                                 <label for="dateFrom" class="form-label">Data od</label>
-                                <input type="text" class="form-control form-control-sm datepicker" id="dateFrom" placeholder="Wybierz datę">
+                                <input type="text" class="form-control form-control-sm datepicker" id="dateFrom"
+                                    placeholder="Wybierz datę">
                             </div>
                             <div class="col-md-3">
                                 <label for="dateTo" class="form-label">Data do</label>
-                                <input type="text" class="form-control form-control-sm datepicker" id="dateTo" placeholder="Wybierz datę">
+                                <input type="text" class="form-control form-control-sm datepicker" id="dateTo"
+                                    placeholder="Wybierz datę">
                             </div>
                             <div class="col-md-4">
                                 <label for="datePreset" class="form-label">Szybki wybór</label>
-                                <select class="form-select form-select-sm" id="datePreset" onchange="applyDatePreset(this.value)">
+                                <select class="form-select form-select-sm" id="datePreset"
+                                    onchange="applyDatePreset(this.value)">
                                     <option value="">Wybierz zakres...</option>
                                     <option value="today">Dzisiaj</option>
                                     <option value="yesterday">Wczoraj</option>
@@ -489,7 +503,7 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <!-- Kluczowe metryki -->
                     <div class="row mb-4">
                         <div class="col-md-3">
@@ -529,7 +543,7 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <!-- Wszystkie rodzaje -->
                     <div class="row mb-4">
                         <div class="col-md-12">
@@ -556,7 +570,7 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <!-- Wszystkie kampanie z jakością -->
                     <div class="row mb-4">
                         <div class="col-md-12">
@@ -587,7 +601,7 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <!-- Agregacje -->
                     <div class="row">
                         <div class="col-md-6">
@@ -637,7 +651,7 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <!-- Dodatkowe agregacje -->
                     <div class="row mt-4">
                         <div class="col-md-12">
@@ -654,7 +668,7 @@
                 </div>
             </div>
         </div>
-        
+
         <!-- Sekcja szczegółów (początkowo ukryta) -->
         <div id="detailsSection" style="display: none;">
             <div class="card">
@@ -678,11 +692,13 @@
                         <div class="row">
                             <div class="col-md-2">
                                 <label for="filterDateFrom" class="form-label">Data od</label>
-                                <input type="text" class="form-control form-control-sm datepicker" id="filterDateFrom" placeholder="Data od">
+                                <input type="text" class="form-control form-control-sm datepicker" id="filterDateFrom"
+                                    placeholder="Data od">
                             </div>
                             <div class="col-md-2">
                                 <label for="filterDateTo" class="form-label">Data do</label>
-                                <input type="text" class="form-control form-control-sm datepicker" id="filterDateTo" placeholder="Data do">
+                                <input type="text" class="form-control form-control-sm datepicker" id="filterDateTo"
+                                    placeholder="Data do">
                             </div>
                             <div class="col-md-2">
                                 <label for="filterQuality" class="form-label">Jakość</label>
@@ -724,7 +740,7 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <!-- Tabela z danymi -->
                     <div class="table-responsive">
                         <table id="dataTable" class="table table-striped table-hover" style="width:100%">
@@ -734,7 +750,7 @@
                 </div>
             </div>
         </div>
-        
+
         <!-- Sekcja analizy (początkowo ukryta) -->
         <div id="analysisSection" style="display: none;">
             <div class="card">
@@ -755,15 +771,18 @@
                         <div class="row align-items-end">
                             <div class="col-md-3">
                                 <label for="analysisDateFrom" class="form-label">Data od</label>
-                                <input type="text" class="form-control form-control-sm datepicker" id="analysisDateFrom" placeholder="Wybierz datę">
+                                <input type="text" class="form-control form-control-sm datepicker" id="analysisDateFrom"
+                                    placeholder="Wybierz datę">
                             </div>
                             <div class="col-md-3">
                                 <label for="analysisDateTo" class="form-label">Data do</label>
-                                <input type="text" class="form-control form-control-sm datepicker" id="analysisDateTo" placeholder="Wybierz datę">
+                                <input type="text" class="form-control form-control-sm datepicker" id="analysisDateTo"
+                                    placeholder="Wybierz datę">
                             </div>
                             <div class="col-md-4">
                                 <label for="analysisDatePreset" class="form-label">Szybki wybór</label>
-                                <select class="form-select form-select-sm" id="analysisDatePreset" onchange="applyAnalysisDatePreset(this.value)">
+                                <select class="form-select form-select-sm" id="analysisDatePreset"
+                                    onchange="applyAnalysisDatePreset(this.value)">
                                     <option value="">Wybierz zakres...</option>
                                     <option value="today">Dzisiaj</option>
                                     <option value="yesterday">Wczoraj</option>
@@ -790,7 +809,7 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="row">
                         <div class="col-md-6">
                             <canvas id="qualityChart"></canvas>
@@ -817,7 +836,7 @@
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <script src="https://npmcdn.com/flatpickr/dist/l10n/pl.js"></script>
     <script src="https://unpkg.com/xlsx/dist/xlsx.full.min.js"></script>
-    
+
     <script>
         // Globalne zmienne
         let processedData = [];
@@ -828,7 +847,39 @@
         let analysisDateFilter = { from: null, to: null };
         let dataTable = null;
         let charts = {};
-        
+        // ====== USTAWIENIA UDOSTĘPNIANIA (Opcja A) ======
+        const SHARE_API_URL = '/api/reports'; // backend: POST tworzy raport i zwraca link
+
+        // Kolumny potencjalnie zawierające dane kontrahentów / PII – usuń je przy udostępnianiu
+        const PII_COLUMNS = new Set([
+            'Kontrahent', 'Nazwa kontrahenta', 'Imię', 'Nazwisko',
+            'Email', 'E-mail', 'Telefon', 'Nr telefonu',
+            'NIP', 'PESEL', 'Adres', 'Ulica', 'Miasto', 'Kod pocztowy'
+        ]);
+
+        function redactFreeText(str) {
+            if (!str) return '';
+            let s = String(str);
+
+            // Redakcja emaili
+            s = s.replace(/[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}/gi, '[EMAIL]');
+            // Redakcja numerów telefonu (prosto, można dopracować)
+            s = s.replace(/(\+?\d[\d\s-]{7,}\d)/g, '[TEL]');
+
+            return s;
+        }
+
+        function sanitizeRow(row) {
+            const out = {};
+            for (const [k, v] of Object.entries(row)) {
+                if (PII_COLUMNS.has(k)) continue;      // wycinamy PII kolumnami
+                if (k === 'Opis') out[k] = redactFreeText(v); // maskujemy PII w wolnym tekście
+                else out[k] = v;
+            }
+            return out;
+        }
+
+
         // Inicjalizacja kalendarzy
         function initDatePickers() {
             flatpickr(".datepicker", {
@@ -838,45 +889,45 @@
                 disableMobile: true
             });
         }
-        
+
         // Algorytm określania jakości
         function calculateQuality(status, status2) {
             let quality = 0;
             status = String(status || '');
             status2 = String(status2 || '');
-            
+
             // Zoptymalizowane sprawdzanie
             const goodStatuses = new Set(["Sukces", "Konsultacja", "W realizacji", "Kontakt z klientem"]);
-            const goodStatus2 = new Set(["oczekiwanie na umowę", "Oferta", "proforma po terminie", 
-                "WYSŁANY HANDLOWIEC", "WYSŁANY POCZTA", "działamy", "przekazany do IUS", 
-                "przekazany do ZW", "czekamy na decyzję", "przekazany w teren", 
+            const goodStatus2 = new Set(["oczekiwanie na umowę", "Oferta", "proforma po terminie",
+                "WYSŁANY HANDLOWIEC", "WYSŁANY POCZTA", "działamy", "przekazany do IUS",
+                "przekazany do ZW", "czekamy na decyzję", "przekazany w teren",
                 "DO WSKRZESZENIA", "Odrzucone przez Katarzynę"]);
             const mediumStatus2 = new Set(["Brak kontaktu - oferta", "poradził sobie", "rozmyślił się",
-                "tylko mail - odpowiedź", "U konkurencji", "Za drogo", "W trakcie rozmów", 
-                "przestał odbierać", "Wstrzymuje się", "Przekazany na inne działania", 
+                "tylko mail - odpowiedź", "U konkurencji", "Za drogo", "W trakcie rozmów",
+                "przestał odbierać", "Wstrzymuje się", "Przekazany na inne działania",
                 "NIE OPŁACA SIĘ", "czeka na orzecznictwo", "Pomyłka"]);
             const badStatus2 = new Set(["błędne dane", "nie kwalifikuje się", "Nie odbiera",
-                "Nigdy nie odebrał", "Spam", "Umowa po analizie", "z ciekawości", 
+                "Nigdy nie odebrał", "Spam", "Umowa po analizie", "z ciekawości",
                 "nie odebrał aby usłyszeć ofertę", "brak represji", "BRAK DZIAŁALNOŚCI NIEPODLEG.",
                 "otrzymali odszkodowanie", "PRZESIEDLONY", "OBOZY NIEMIECKIE", "BRAK UPRAWNIONYCH",
                 "BŁĘDNY CZAS REPRESJI", "SYBERIA NIE KWALIFIKUJE SIĘ", "tylko mail - bez odpowiedzi",
                 "Brak kontaktu", "NIE CHCE ROZMAWIAĆ", "Duplikat"]);
-            
+
             if (goodStatuses.has(status)) {
                 quality = 3;
             }
-            
+
             if (status === "Zamknięta") {
                 quality = 1;
             }
-            
+
             const checkStatuses = new Set(["Kontakt z klientem", "Zainteresowana", "W realizacji", "Konsultacja", "Przekazana"]);
             if (checkStatuses.has(status)) {
                 if (goodStatus2.has(status2)) {
                     quality = 3;
                 }
             }
-            
+
             const mediumCheckStatuses = new Set(["Kontakt z klientem", "Zainteresowana", "Zamknięta", "Konsultacja"]);
             if (mediumCheckStatuses.has(status)) {
                 if (mediumStatus2.has(status2)) {
@@ -886,12 +937,12 @@
                     quality = 1;
                 }
             }
-            
+
             return quality;
         }
-        
+
         function getQualityDescription(quality) {
-            switch(quality) {
+            switch (quality) {
                 case 0: return "brak przypisania";
                 case 1: return "zły";
                 case 2: return "średni";
@@ -899,7 +950,7 @@
                 default: return "brak przypisania";
             }
         }
-        
+
         // Parsowanie parametrów UTM
         function parseUTMParameters(description) {
             const params = {
@@ -910,9 +961,9 @@
                 utm_content2: "",
                 lead_campaign_name: ""
             };
-            
+
             if (!description || typeof description !== 'string') return params;
-            
+
             // Proste parsowanie bez regex dla wydajności
             const lines = description.split('\n');
             for (const line of lines) {
@@ -932,20 +983,20 @@
                     params.utm_gclid = gclidPart?.split(/[&\s]/)[0] || '';
                 }
             }
-            
+
             return params;
         }
-        
+
         // Parsowanie daty - POPRAWIONA FUNKCJA
         function parseDate(dateStr) {
             if (!dateStr) return null;
-            
+
             // Upewnij się, że dateStr jest stringiem
             dateStr = String(dateStr).trim();
             if (!dateStr) return null;
-            
+
             let date = null;
-            
+
             try {
                 // Sprawdź różne formaty daty
                 if (typeof dateStr === 'string') {
@@ -989,19 +1040,19 @@
                     // Jeśli już jest Date
                     date = dateStr;
                 }
-                
+
                 // Sprawdź czy data jest poprawna
                 if (!date || isNaN(date.getTime()) || date.getFullYear() < 2000 || date.getFullYear() > 2100) {
                     return null;
                 }
-                
+
                 return date;
             } catch (e) {
                 console.warn('Błąd parsowania daty:', dateStr, e);
                 return null;
             }
         }
-        
+
         // Formatowanie daty do stringa
         function formatDate(date) {
             if (!date || !(date instanceof Date) || isNaN(date.getTime())) {
@@ -1009,24 +1060,24 @@
             }
             return date.toISOString().split('T')[0];
         }
-        
+
         // Pobierz dane przefiltrowane wg daty
         function getDateFilteredData(data, dateFilterObj) {
             if (!dateFilterObj || (!dateFilterObj.from && !dateFilterObj.to)) {
                 return data;
             }
-            
+
             return data.filter(row => {
                 const dateStr = row['Czas rozpoczęcia'];
                 if (!dateStr) return false;
-                
+
                 const date = parseDate(dateStr);
                 if (!date) return false;
-                
+
                 if (dateFilterObj.from && date < dateFilterObj.from) {
                     return false;
                 }
-                
+
                 if (dateFilterObj.to) {
                     // Ustaw godzinę na koniec dnia dla filtrowania "do"
                     const endOfDay = new Date(dateFilterObj.to);
@@ -1035,15 +1086,15 @@
                         return false;
                     }
                 }
-                
+
                 return true;
             });
         }
-        
+
         // Pobierz dane z wszystkimi filtrami
         function getFilteredData() {
             let data = getDateFilteredData(processedData, dateFilter);
-            
+
             return data.filter(row => {
                 if (currentFilters.quality && row['JakośćK'] !== currentFilters.quality) return false;
                 if (currentFilters.type && row['Rodzaj'] !== currentFilters.type) return false;
@@ -1056,42 +1107,42 @@
                 return true;
             });
         }
-        
+
         // Przetwarzanie pliku
         async function processFile(file) {
             showProcessingOverlay('Wczytywanie pliku...');
-            
+
             return new Promise((resolve, reject) => {
                 const reader = new FileReader();
-                
-                reader.onload = async function(e) {
+
+                reader.onload = async function (e) {
                     try {
                         let jsonData;
-                        
+
                         if (file.name.toLowerCase().endsWith('.csv')) {
                             // Przetwarzanie CSV
                             const text = e.target.result;
                             const lines = text.split('\n').filter(line => line.trim());
-                            
+
                             if (lines.length < 2) {
                                 reject(new Error('Plik CSV jest pusty'));
                                 return;
                             }
-                            
+
                             // Parsowanie nagłówków
                             const headers = parseCSVLine(lines[0]);
                             jsonData = [headers];
-                            
+
                             // Przetwarzanie wierszy
                             const totalRows = lines.length - 1;
                             let processed = 0;
-                            
+
                             for (let i = 1; i < lines.length; i++) {
                                 if (!lines[i].trim()) continue;
-                                
+
                                 const rowData = parseCSVLine(lines[i]);
                                 jsonData.push(rowData);
-                                
+
                                 processed++;
                                 if (processed % 1000 === 0) {
                                     updateProcessingProgress(processed, totalRows);
@@ -1105,18 +1156,18 @@
                             const worksheet = workbook.Sheets[firstSheetName];
                             jsonData = XLSX.utils.sheet_to_json(worksheet, { header: 1 });
                         }
-                        
+
                         // Przetwarzanie danych
                         await processData(jsonData);
                         resolve();
-                        
+
                     } catch (error) {
                         reject(error);
                     }
                 };
-                
+
                 reader.onerror = reject;
-                
+
                 if (file.name.toLowerCase().endsWith('.csv')) {
                     reader.readAsText(file, 'UTF-8');
                 } else {
@@ -1124,16 +1175,16 @@
                 }
             });
         }
-        
+
         // Parsowanie CSV
         function parseCSVLine(line) {
             const result = [];
             let current = '';
             let inQuotes = false;
-            
+
             for (let i = 0; i < line.length; i++) {
                 const char = line[i];
-                
+
                 if (char === '"') {
                     inQuotes = !inQuotes;
                 } else if (char === ',' && !inQuotes) {
@@ -1143,15 +1194,15 @@
                     current += char;
                 }
             }
-            
+
             result.push(current);
             return result.map(cell => cell.trim().replace(/^"|"$/g, ''));
         }
-        
+
         // Przetwarzanie danych
         async function processData(jsonData) {
             processedData = [];
-            
+
             const headers = jsonData[0];
             const columnMap = {};
             headers.forEach((header, index) => {
@@ -1159,60 +1210,60 @@
                     columnMap[header.toString().trim()] = index;
                 }
             });
-            
+
             const totalRows = jsonData.length - 1;
             let processed = 0;
-            
+
             // Przetwarzanie w partiach dla wydajności
             const batchSize = 5000;
-            
+
             for (let i = 1; i < jsonData.length; i += batchSize) {
                 const batchEnd = Math.min(i + batchSize, jsonData.length);
-                
+
                 for (let j = i; j < batchEnd; j++) {
                     const row = jsonData[j];
                     if (!row || row.length === 0) continue;
-                    
+
                     const getValue = (columnName) => {
                         const index = columnMap[columnName];
                         return index !== undefined && row[index] !== undefined ? String(row[index]) : '';
                     };
-                    
+
                     const status = getValue('Status');
                     const status2 = getValue('Dodatkowy status');
                     const description = getValue('Opis');
-                    
+
                     const qualityValue = calculateQuality(status, status2);
                     const qualityDesc = getQualityDescription(qualityValue);
                     const utmParams = parseUTMParameters(description);
-                    
+
                     const dataRow = {};
                     headers.forEach((header, index) => {
                         if (header) {
                             dataRow[header] = row[index] || '';
                         }
                     });
-                    
+
                     dataRow['Jakość'] = qualityValue;
                     dataRow['JakośćK'] = qualityDesc;
                     Object.assign(dataRow, utmParams);
-                    
+
                     processedData.push(dataRow);
                     processed++;
                 }
-                
+
                 updateProcessingProgress(processed, totalRows);
-                
+
                 // Oddech dla przeglądarki
                 if (batchEnd < jsonData.length) {
                     await new Promise(resolve => setTimeout(resolve, 0));
                 }
             }
-            
+
             // Agregacja danych
             aggregateData();
         }
-        
+
         // Agregacja danych z uwzględnieniem filtrów
         function aggregateData(data = processedData) {
             aggregatedData = {
@@ -1226,21 +1277,21 @@
                 totalRows: data.length,
                 dateRange: getDateRange(data)
             };
-            
+
             // Jedna pętla dla wszystkich agregacji
             data.forEach(row => {
                 // Jakość
                 const quality = row['JakośćK'] || 'brak przypisania';
                 aggregatedData.qualityCounts[quality] = (aggregatedData.qualityCounts[quality] || 0) + 1;
-                
+
                 // Rodzaj
                 const type = row['Rodzaj'] || 'Brak rodzaju';
                 aggregatedData.typeCounts[type] = (aggregatedData.typeCounts[type] || 0) + 1;
-                
+
                 // Status
                 const status = row['Status'] || 'Brak statusu';
                 aggregatedData.statusCounts[status] = (aggregatedData.statusCounts[status] || 0) + 1;
-                
+
                 // Kampania - używamy różnych źródeł
                 let campaign = row['Kampania marketingowa'] || row['utm_campaign'] || row['lead.campaign_name'] || 'Brak kampanii';
                 if (campaign && campaign.trim()) {
@@ -1249,24 +1300,24 @@
                     campaign = 'Brak kampanii';
                     aggregatedData.campaignCounts[campaign] = (aggregatedData.campaignCounts[campaign] || 0) + 1;
                 }
-                
+
                 // UTM Source
                 const utmSource = row['utm_source'] || 'Brak UTM';
                 aggregatedData.utmSourceCounts[utmSource] = (aggregatedData.utmSourceCounts[utmSource] || 0) + 1;
-                
+
                 // Jakość wg kampanii
                 if (!aggregatedData.qualityByCampaign[campaign]) {
                     aggregatedData.qualityByCampaign[campaign] = { 'dobry': 0, 'średni': 0, 'zły': 0, 'brak przypisania': 0 };
                 }
                 aggregatedData.qualityByCampaign[campaign][quality]++;
-                
+
                 // Jakość wg miesiąca - POPRAWIONE
                 const dateStr = row['Czas rozpoczęcia'];
                 if (dateStr) {
                     const date = parseDate(dateStr);
                     if (date && !isNaN(date.getTime())) {
                         const monthKey = `${date.getFullYear()}-${(date.getMonth() + 1).toString().padStart(2, '0')}`;
-                        
+
                         if (!aggregatedData.qualityByMonth[monthKey]) {
                             aggregatedData.qualityByMonth[monthKey] = { 'dobry': 0, 'średni': 0, 'zły': 0, 'brak przypisania': 0 };
                         }
@@ -1274,19 +1325,19 @@
                     }
                 }
             });
-            
+
             console.log('Agregacja zakończona:', {
                 totalRows: aggregatedData.totalRows,
                 monthsWithData: Object.keys(aggregatedData.qualityByMonth).length,
                 dateRange: aggregatedData.dateRange
             });
         }
-        
+
         // Pobierz zakres dat z danych
         function getDateRange(data) {
             let minDate = null;
             let maxDate = null;
-            
+
             data.forEach(row => {
                 const dateStr = row['Czas rozpoczęcia'];
                 if (dateStr) {
@@ -1297,57 +1348,57 @@
                     }
                 }
             });
-            
+
             return { min: minDate, max: maxDate };
         }
-        
+
         // Formatowanie zakresu dat
         function formatDateRange(range) {
             if (!range.min || !range.max) return 'Brak danych';
-            
+
             const format = (date) => {
                 return date.toLocaleDateString('pl-PL');
             };
-            
+
             return `${format(range.min)} - ${format(range.max)}`;
         }
-        
+
         // Aktualizacja interfejsu
         function updateUI() {
             const data = getDateFilteredData(processedData, dateFilter);
             aggregateData(data);
-            
+
             const total = aggregatedData.totalRows;
-            
+
             // Aktualizacja informacji o filtrach
             updateDateFilterInfo();
-            
+
             // Aktualizacja metryk
             document.getElementById('metricTotal').textContent = total.toLocaleString();
             document.getElementById('metricGood').textContent = aggregatedData.qualityCounts['dobry'].toLocaleString();
             document.getElementById('metricMedium').textContent = aggregatedData.qualityCounts['średni'].toLocaleString();
             document.getElementById('metricBad').textContent = aggregatedData.qualityCounts['zły'].toLocaleString();
-            
+
             document.getElementById('metricGoodPct').textContent = `${total > 0 ? ((aggregatedData.qualityCounts['dobry'] / total) * 100).toFixed(1) : 0}%`;
             document.getElementById('metricMediumPct').textContent = `${total > 0 ? ((aggregatedData.qualityCounts['średni'] / total) * 100).toFixed(1) : 0}%`;
             document.getElementById('metricBadPct').textContent = `${total > 0 ? ((aggregatedData.qualityCounts['zły'] / total) * 100).toFixed(1) : 0}%`;
-            
+
             document.getElementById('totalRows').textContent = `${total.toLocaleString()} wierszy`;
-            
+
             // Aktualizacja tabel agregacji
             updateAggregationTables();
-            
+
             // Aktualizacja filtrów
             updateFilterOptions();
-            
+
             // Generowanie wykresów
             generateCharts();
         }
-        
+
         // Aktualizacja informacji o filtrach daty
         function updateDateFilterInfo() {
             let info = 'Filtry daty: ';
-            
+
             if (dateFilter.from || dateFilter.to) {
                 if (dateFilter.from) {
                     info += `Od ${formatDate(dateFilter.from)} `;
@@ -1358,27 +1409,27 @@
             } else {
                 info += 'Brak';
             }
-            
+
             document.getElementById('dateFilterInfo').textContent = info;
         }
-        
+
         // Aktualizacja tabel agregacji
         function updateAggregationTables() {
             const data = getDateFilteredData(processedData, dateFilter);
-            
+
             // Wszystkie rodzaje
             const typeCounts = {};
             data.forEach(row => {
                 const type = row['Rodzaj'] || 'Brak rodzaju';
                 typeCounts[type] = (typeCounts[type] || 0) + 1;
             });
-            
+
             const allTypes = Object.entries(typeCounts)
                 .sort((a, b) => b[1] - a[1]);
-            
+
             const typesBody = document.getElementById('typeDistributionBody');
             typesBody.innerHTML = '';
-            
+
             allTypes.forEach(([type, count]) => {
                 const percentage = ((count / aggregatedData.totalRows) * 100).toFixed(1);
                 const row = `
@@ -1390,22 +1441,22 @@
                 `;
                 typesBody.innerHTML += row;
             });
-            
+
             // Wszystkie kampanie z jakością
             const campaignQuality = {};
             data.forEach(row => {
                 let campaign = row['Kampania marketingowa'] || row['utm_campaign'] || row['lead.campaign_name'] || 'Brak kampanii';
                 const quality = row['JakośćK'] || 'brak przypisania';
-                
+
                 if (!campaignQuality[campaign]) {
                     campaignQuality[campaign] = { 'dobry': 0, 'średni': 0, 'zły': 0, 'brak przypisania': 0 };
                 }
                 campaignQuality[campaign][quality]++;
             });
-            
+
             const campaignQualityBody = document.getElementById('campaignQualityBody');
             campaignQualityBody.innerHTML = '';
-            
+
             Object.entries(campaignQuality)
                 .sort((a, b) => {
                     const totalA = a[1]['dobry'] + a[1]['średni'] + a[1]['zły'] + a[1]['brak przypisania'];
@@ -1415,7 +1466,7 @@
                 .forEach(([campaign, qualityData]) => {
                     const total = qualityData['dobry'] + qualityData['średni'] + qualityData['zły'] + qualityData['brak przypisania'];
                     const goodPercentage = total > 0 ? ((qualityData['dobry'] / total) * 100).toFixed(1) : '0.0';
-                    
+
                     const row = `
                         <tr class="campaign-quality-row" onclick="filterByCampaign('${campaign.replace(/'/g, "\\'")}')">
                             <td class="text-truncate" title="${campaign}">${campaign.length > 40 ? campaign.substring(0, 40) + '...' : campaign}</td>
@@ -1431,20 +1482,20 @@
                     `;
                     campaignQualityBody.innerHTML += row;
                 });
-            
+
             // Wszystkie kampanie
             const campaignCounts = {};
             data.forEach(row => {
                 let campaign = row['Kampania marketingowa'] || row['utm_campaign'] || row['lead.campaign_name'] || 'Brak kampanii';
                 campaignCounts[campaign] = (campaignCounts[campaign] || 0) + 1;
             });
-            
+
             const allCampaigns = Object.entries(campaignCounts)
                 .sort((a, b) => b[1] - a[1]);
-            
+
             const campaignsBody = document.getElementById('allCampaignsBody');
             campaignsBody.innerHTML = '';
-            
+
             allCampaigns.forEach(([campaign, count]) => {
                 const percentage = ((count / aggregatedData.totalRows) * 100).toFixed(1);
                 const row = `
@@ -1456,20 +1507,20 @@
                 `;
                 campaignsBody.innerHTML += row;
             });
-            
+
             // Wszystkie UTM sources
             const utmSourceCounts = {};
             data.forEach(row => {
                 const utmSource = row['utm_source'] || 'Brak UTM';
                 utmSourceCounts[utmSource] = (utmSourceCounts[utmSource] || 0) + 1;
             });
-            
+
             const allUTMSources = Object.entries(utmSourceCounts)
                 .sort((a, b) => b[1] - a[1]);
-            
+
             const utmBody = document.getElementById('allUTMBody');
             utmBody.innerHTML = '';
-            
+
             allUTMSources.forEach(([source, count]) => {
                 const percentage = ((count / aggregatedData.totalRows) * 100).toFixed(1);
                 const row = `
@@ -1482,49 +1533,49 @@
                 utmBody.innerHTML += row;
             });
         }
-        
+
         // Aktualizacja opcji filtrów
         function updateFilterOptions() {
             const data = getDateFilteredData(processedData, dateFilter);
-            
+
             const statusCounts = {};
             const campaignCounts = {};
             const utmSourceCounts = {};
-            
+
             data.forEach(row => {
                 const status = row['Status'] || 'Brak statusu';
                 statusCounts[status] = (statusCounts[status] || 0) + 1;
-                
+
                 let campaign = row['Kampania marketingowa'] || row['utm_campaign'] || row['lead.campaign_name'] || 'Brak kampanii';
                 campaignCounts[campaign] = (campaignCounts[campaign] || 0) + 1;
-                
+
                 const utmSource = row['utm_source'] || 'Brak UTM';
                 utmSourceCounts[utmSource] = (utmSourceCounts[utmSource] || 0) + 1;
             });
-            
+
             const statusSelect = document.getElementById('filterStatus');
             const campaignSelect = document.getElementById('filterCampaign');
             const utmSelect = document.getElementById('filterUTM');
-            
+
             // Statusy
             statusSelect.innerHTML = '<option value="">Wszystkie</option>';
             Object.keys(statusCounts).sort().forEach(status => {
                 statusSelect.innerHTML += `<option value="${status}">${status} (${statusCounts[status]})</option>`;
             });
-            
+
             // Kampanie
             campaignSelect.innerHTML = '<option value="">Wszystkie</option>';
             Object.keys(campaignCounts).sort().forEach(campaign => {
                 campaignSelect.innerHTML += `<option value="${campaign}">${campaign} (${campaignCounts[campaign]})</option>`;
             });
-            
+
             // UTM Sources
             utmSelect.innerHTML = '<option value="">Wszystkie</option>';
             Object.keys(utmSourceCounts).sort().forEach(source => {
                 utmSelect.innerHTML += `<option value="${source}">${source} (${utmSourceCounts[source]})</option>`;
             });
         }
-        
+
         // Generowanie wykresów dla podsumowania
         function generateCharts() {
             // Zniszcz istniejące wykresy
@@ -1532,15 +1583,15 @@
                 if (chart) chart.destroy();
             });
             charts = {};
-            
+
             const data = getDateFilteredData(processedData, dateFilter);
-            
+
             // Wykres jakości w czasie - POPRAWIONY
             const timeCtx = document.getElementById('qualityOverTimeChart');
             if (timeCtx) {
                 // Oblicz jakość wg miesiąca dla przefiltrowanych danych
                 const qualityByMonth = {};
-                
+
                 data.forEach(row => {
                     const dateStr = row['Czas rozpoczęcia'];
                     if (dateStr) {
@@ -1548,7 +1599,7 @@
                         if (date && !isNaN(date.getTime())) {
                             const monthKey = `${date.getFullYear()}-${(date.getMonth() + 1).toString().padStart(2, '0')}`;
                             const quality = row['JakośćK'] || 'brak przypisania';
-                            
+
                             if (!qualityByMonth[monthKey]) {
                                 qualityByMonth[monthKey] = { 'dobry': 0, 'średni': 0, 'zły': 0, 'brak przypisania': 0 };
                             }
@@ -1556,7 +1607,7 @@
                         }
                     }
                 });
-                
+
                 // Filtruj tylko miesiące z danymi
                 const monthsWithData = Object.keys(qualityByMonth)
                     .filter(month => {
@@ -1564,21 +1615,21 @@
                         return (monthData['dobry'] + monthData['średni'] + monthData['zły'] + monthData['brak przypisania']) > 0;
                     })
                     .sort();
-                
+
                 console.log('Miesiące z danymi dla wykresu:', monthsWithData);
-                
+
                 if (monthsWithData.length > 0) {
                     const goodData = monthsWithData.map(m => qualityByMonth[m]['dobry'] || 0);
                     const mediumData = monthsWithData.map(m => qualityByMonth[m]['średni'] || 0);
                     const badData = monthsWithData.map(m => qualityByMonth[m]['zły'] || 0);
-                    
+
                     // Formatuj etykiety miesięcy
                     const monthLabels = monthsWithData.map(month => {
                         const [year, monthNum] = month.split('-');
                         const monthNames = ['Sty', 'Lut', 'Mar', 'Kwi', 'Maj', 'Cze', 'Lip', 'Sie', 'Wrz', 'Paź', 'Lis', 'Gru'];
                         return `${monthNames[parseInt(monthNum) - 1]} ${year}`;
                     });
-                    
+
                     charts.qualityOverTime = new Chart(timeCtx, {
                         type: 'line',
                         data: {
@@ -1613,9 +1664,9 @@
                         options: {
                             responsive: true,
                             plugins: {
-                                title: { 
-                                    display: true, 
-                                    text: 'Jakość leadów w czasie' 
+                                title: {
+                                    display: true,
+                                    text: 'Jakość leadów w czasie'
                                 }
                             },
                             scales: {
@@ -1641,32 +1692,32 @@
                 }
             }
         }
-        
+
         // Generowanie wykresów dla analizy
         function generateAnalysisCharts() {
             const data = getDateFilteredData(processedData, analysisDateFilter);
-            
+
             // Agregacja dla analizy
             const analysisAggregated = {
                 qualityCounts: { 'dobry': 0, 'średni': 0, 'zły': 0, 'brak przypisania': 0 },
                 statusCounts: {},
                 qualityByCampaign: {}
             };
-            
+
             data.forEach(row => {
                 const quality = row['JakośćK'] || 'brak przypisania';
                 analysisAggregated.qualityCounts[quality]++;
-                
+
                 const status = row['Status'] || 'Brak statusu';
                 analysisAggregated.statusCounts[status] = (analysisAggregated.statusCounts[status] || 0) + 1;
-                
+
                 let campaign = row['Kampania marketingowa'] || row['utm_campaign'] || row['lead.campaign_name'] || 'Brak kampanii';
                 if (!analysisAggregated.qualityByCampaign[campaign]) {
                     analysisAggregated.qualityByCampaign[campaign] = { 'dobry': 0, 'średni': 0, 'zły': 0, 'brak przypisania': 0 };
                 }
                 analysisAggregated.qualityByCampaign[campaign][quality]++;
             });
-            
+
             // Zniszcz istniejące wykresy analizy
             ['qualityAnalysis', 'statusAnalysis', 'campaignQualityAnalysis'].forEach(chartId => {
                 if (charts[chartId]) {
@@ -1674,7 +1725,7 @@
                     delete charts[chartId];
                 }
             });
-            
+
             // Wykres jakości dla analizy
             const qualityCtx = document.getElementById('qualityChart');
             if (qualityCtx) {
@@ -1700,14 +1751,14 @@
                     }
                 });
             }
-            
+
             // Wykres statusów (top 10) dla analizy
             const statusCtx = document.getElementById('statusChart');
             if (statusCtx) {
                 const topStatuses = Object.entries(analysisAggregated.statusCounts)
                     .sort((a, b) => b[1] - a[1])
                     .slice(0, 10);
-                
+
                 charts.statusAnalysis = new Chart(statusCtx, {
                     type: 'bar',
                     data: {
@@ -1729,7 +1780,7 @@
                     }
                 });
             }
-            
+
             // Wykres jakości wg kampanii (top 10) dla analizy
             const campaignQualityCtx = document.getElementById('campaignQualityChart');
             if (campaignQualityCtx) {
@@ -1740,7 +1791,7 @@
                         return totalB - totalA;
                     })
                     .slice(0, 10);
-                
+
                 if (topCampaigns.length > 0) {
                     const campaignLabels = topCampaigns.map(c => {
                         const campaignName = c[0];
@@ -1749,7 +1800,7 @@
                     const goodCampaignData = topCampaigns.map(c => c[1]['dobry'] || 0);
                     const mediumCampaignData = topCampaigns.map(c => c[1]['średni'] || 0);
                     const badCampaignData = topCampaigns.map(c => c[1]['zły'] || 0);
-                    
+
                     charts.campaignQualityAnalysis = new Chart(campaignQualityCtx, {
                         type: 'bar',
                         data: {
@@ -1779,8 +1830,8 @@
                             },
                             scales: {
                                 x: { stacked: true },
-                                y: { 
-                                    stacked: true, 
+                                y: {
+                                    stacked: true,
                                     beginAtZero: true,
                                     title: {
                                         display: true,
@@ -1793,37 +1844,37 @@
                 }
             }
         }
-        
+
         // Pokazanie danych szczegółowych
         function showDetailsTable() {
             if (dataTable) {
                 dataTable.destroy();
             }
-            
+
             const filteredData = getFilteredData();
             document.getElementById('filteredRows').textContent = `${filteredData.length.toLocaleString()} wierszy`;
-            
+
             if (filteredData.length === 0) {
                 alert('Brak danych spełniających kryteria filtrów');
                 return;
             }
-            
+
             // Ogranicz liczbę kolumn dla wydajności
-            const keyColumns = ['Numer', 'Rodzaj', 'Kontrahent', 'Status', 'Dodatkowy status', 
-                               'Jakość', 'JakośćK', 'utm_source', 'utm_campaign', 'Kampania marketingowa', 'Czas rozpoczęcia'];
-            
+            const keyColumns = ['Numer', 'Rodzaj', 'Kontrahent', 'Status', 'Dodatkowy status',
+                'Jakość', 'JakośćK', 'utm_source', 'utm_campaign', 'Kampania marketingowa', 'Czas rozpoczęcia'];
+
             const sampleRow = filteredData[0];
             const availableColumns = Object.keys(sampleRow).filter(col => keyColumns.includes(col));
-            
+
             // Przygotowanie danych
             const tableData = filteredData.map(row => {
                 return availableColumns.map(col => row[col] || '');
             });
-            
+
             // Inicjalizacja DataTables
             dataTable = $('#dataTable').DataTable({
                 data: tableData,
-                columns: availableColumns.map(col => ({ 
+                columns: availableColumns.map(col => ({
                     title: col,
                     className: col === 'JakośćK' ? 'text-center' : ''
                 })),
@@ -1836,7 +1887,36 @@
                 responsive: true
             });
         }
-        
+        function buildSharePayload() {
+            // Bierzemy dane ograniczone filtrem daty (tym z podsumowania)
+            const dataInScope = getDateFilteredData(processedData, dateFilter);
+
+            // Upewniamy się, że aggregatedData dotyczy aktualnego zakresu
+            aggregateData(dataInScope);
+
+            // OPCJA 1 (najbezpieczniejsza): udostępniaj tylko agregacje + serie do wykresów
+            const payload = {
+                createdAt: new Date().toISOString(),
+                dateFilter: {
+                    from: dateFilter.from ? formatDate(dateFilter.from) : null,
+                    to: dateFilter.to ? formatDate(dateFilter.to) : null
+                },
+                aggregatedData: aggregatedData,
+
+                // Dane do wykresów (bez PII)
+                chartsData: {
+                    qualityByMonth: aggregatedData.qualityByMonth,
+                    qualityByCampaign: aggregatedData.qualityByCampaign
+                }
+            };
+
+            // OPCJA 2 (jeśli chcesz pokazywać też tabelę "szczegóły" innym):
+            // Uwaga: nadal bez PII kolumn i z redakcją Opisu.
+            // payload.detailsSanitized = dataInScope.map(sanitizeRow);
+
+            return payload;
+        }
+
         // Funkcje pomocnicze
         function showProcessingOverlay(message) {
             document.getElementById('largeFileOverlay').style.display = 'flex';
@@ -1844,31 +1924,31 @@
             document.getElementById('largeProgressBar').style.width = '0%';
             document.getElementById('processedRows').textContent = '0 / 0 wierszy';
         }
-        
+
         function updateProcessingProgress(current, total) {
             const percent = Math.min(Math.round((current / total) * 100), 100);
             document.getElementById('largeProgressBar').style.width = `${percent}%`;
             document.getElementById('processedRows').textContent = `${current.toLocaleString()} / ${total.toLocaleString()} wierszy`;
         }
-        
+
         function hideProcessingOverlay() {
             document.getElementById('largeFileOverlay').style.display = 'none';
         }
-        
+
         function showSummarySection() {
             hideAllSections();
             document.getElementById('summarySection').style.display = 'block';
             updateActiveTab('summaryTab');
             updateUI();
         }
-        
+
         function showDetailsSection() {
             hideAllSections();
             document.getElementById('detailsSection').style.display = 'block';
             showDetailsTable();
             updateActiveTab('detailsTab');
         }
-        
+
         function showAnalysisSection() {
             hideAllSections();
             document.getElementById('analysisSection').style.display = 'block';
@@ -1876,40 +1956,40 @@
             generateAnalysisCharts();
             updateAnalysisDateFilterInfo();
         }
-        
+
         function hideAllSections() {
             document.getElementById('uploadSection').style.display = 'none';
             document.getElementById('summarySection').style.display = 'none';
             document.getElementById('detailsSection').style.display = 'none';
             document.getElementById('analysisSection').style.display = 'none';
         }
-        
+
         function updateActiveTab(tabId) {
             ['homeTab', 'summaryTab', 'detailsTab', 'analysisTab'].forEach(id => {
                 document.getElementById(id).classList.remove('active');
             });
             document.getElementById(tabId).classList.add('active');
         }
-        
+
         // Funkcje filtrów daty
         function applyDateFilter() {
             const dateFrom = document.getElementById('dateFrom').value;
             const dateTo = document.getElementById('dateTo').value;
-            
+
             dateFilter = {
                 from: dateFrom ? new Date(dateFrom) : null,
                 to: dateTo ? new Date(dateTo) : null
             };
-            
+
             updateUI();
         }
-        
+
         function applyDatePreset(preset) {
             const today = new Date();
             let fromDate = null;
             let toDate = new Date();
-            
-            switch(preset) {
+
+            switch (preset) {
                 case 'today':
                     fromDate = new Date(today);
                     break;
@@ -1957,32 +2037,32 @@
                 default:
                     return;
             }
-            
+
             document.getElementById('dateFrom').value = fromDate ? formatDate(fromDate) : '';
             document.getElementById('dateTo').value = toDate ? formatDate(toDate) : '';
             applyDateFilter();
         }
-        
+
         // Funkcje filtrów analizy
         function applyAnalysisDateFilter() {
             const dateFrom = document.getElementById('analysisDateFrom').value;
             const dateTo = document.getElementById('analysisDateTo').value;
-            
+
             analysisDateFilter = {
                 from: dateFrom ? new Date(dateFrom) : null,
                 to: dateTo ? new Date(dateTo) : null
             };
-            
+
             updateAnalysisDateFilterInfo();
             generateAnalysisCharts();
         }
-        
+
         function applyAnalysisDatePreset(preset) {
             const today = new Date();
             let fromDate = null;
             let toDate = new Date();
-            
-            switch(preset) {
+
+            switch (preset) {
                 case 'today':
                     fromDate = new Date(today);
                     break;
@@ -2031,15 +2111,15 @@
                 default:
                     return;
             }
-            
+
             document.getElementById('analysisDateFrom').value = fromDate ? formatDate(fromDate) : '';
             document.getElementById('analysisDateTo').value = toDate ? formatDate(toDate) : '';
             applyAnalysisDateFilter();
         }
-        
+
         function updateAnalysisDateFilterInfo() {
             let info = 'Filtry daty: ';
-            
+
             if (analysisDateFilter.from || analysisDateFilter.to) {
                 if (analysisDateFilter.from) {
                     info += `Od ${formatDate(analysisDateFilter.from)} `;
@@ -2050,10 +2130,10 @@
             } else {
                 info += 'Brak (wszystkie dane)';
             }
-            
+
             document.getElementById('analysisDateFilterInfo').textContent = info;
         }
-        
+
         // Funkcje filtrów jakości/typu/kampanii
         function filterByQuality(quality) {
             currentFilters = { quality };
@@ -2061,38 +2141,38 @@
             document.getElementById('filterQuality').value = quality;
             applyFilters();
         }
-        
+
         function filterByType(type) {
             currentFilters = { type };
             showDetailsSection();
             applyFilters();
         }
-        
+
         function filterByCampaign(campaign) {
             currentFilters = { campaign };
             showDetailsSection();
             document.getElementById('filterCampaign').value = campaign;
             applyFilters();
         }
-        
+
         function filterByUTM(source) {
             currentFilters = { utmSource: source };
             showDetailsSection();
             document.getElementById('filterUTM').value = source;
             applyFilters();
         }
-        
+
         function showAllData() {
             currentFilters = {};
             showDetailsSection();
             clearFilterInputs();
             applyFilters();
         }
-        
+
         function applyFilters() {
             const filterDateFrom = document.getElementById('filterDateFrom').value;
             const filterDateTo = document.getElementById('filterDateTo').value;
-            
+
             currentFilters = {
                 quality: document.getElementById('filterQuality').value,
                 status: document.getElementById('filterStatus').value,
@@ -2103,13 +2183,13 @@
             };
             showDetailsTable();
         }
-        
+
         function clearFilters() {
             currentFilters = {};
             clearFilterInputs();
             showDetailsTable();
         }
-        
+
         function clearFilterInputs() {
             document.getElementById('filterDateFrom').value = '';
             document.getElementById('filterDateTo').value = '';
@@ -2118,32 +2198,72 @@
             document.getElementById('filterCampaign').value = '';
             document.getElementById('filterUTM').value = '';
         }
-        
+
         // Eksport danych
-        document.getElementById('exportSummary').addEventListener('click', function() {
+        document.getElementById('exportSummary').addEventListener('click', function () {
             exportData('summary');
         });
-        
-        document.getElementById('exportDetails').addEventListener('click', function() {
+
+        document.getElementById('exportDetails').addEventListener('click', function () {
             exportData('details');
         });
-        
+        document.getElementById('shareReport').addEventListener('click', async function () {
+            if (!processedData || processedData.length === 0) {
+                alert('Najpierw prześlij plik do analizy');
+                return;
+            }
+
+            const statusEl = document.getElementById('shareStatus');
+            const linkEl = document.getElementById('shareLink');
+
+            try {
+                statusEl.textContent = 'Tworzę link...';
+                linkEl.style.display = 'none';
+
+                const payload = buildSharePayload();
+
+                const res = await fetch(SHARE_API_URL, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+
+                if (!res.ok) {
+                    throw new Error('Backend zwrócił błąd HTTP ' + res.status);
+                }
+
+                const data = await res.json();
+                // oczekujemy np: { id: "abc", url: "https://..." }
+
+                statusEl.textContent = 'Gotowe:';
+                linkEl.href = data.url;
+                linkEl.textContent = data.url;
+                linkEl.style.display = 'inline-block';
+
+            } catch (e) {
+                console.error(e);
+                statusEl.textContent = '';
+                alert('Nie udało się udostępnić raportu: ' + e.message);
+            }
+        });
+
+
         function exportData(type) {
             let dataToExport;
             let fileName;
-            
+
             if (type === 'summary') {
                 // Eksport agregacji
                 const summaryData = [];
                 const data = getDateFilteredData(processedData, dateFilter);
-                
+
                 // Agregacja jakości
                 const qualityCounts = { 'dobry': 0, 'średni': 0, 'zły': 0, 'brak przypisania': 0 };
                 data.forEach(row => {
                     const quality = row['JakośćK'] || 'brak przypisania';
                     qualityCounts[quality]++;
                 });
-                
+
                 Object.entries(qualityCounts).forEach(([quality, count]) => {
                     summaryData.push({
                         'Typ': 'Jakość',
@@ -2152,14 +2272,14 @@
                         'Procent': `${((count / data.length) * 100).toFixed(1)}%`
                     });
                 });
-                
+
                 // Rozkład wg rodzaju
                 const typeCounts = {};
                 data.forEach(row => {
                     const type = row['Rodzaj'] || 'Brak rodzaju';
                     typeCounts[type] = (typeCounts[type] || 0) + 1;
                 });
-                
+
                 Object.entries(typeCounts)
                     .sort((a, b) => b[1] - a[1])
                     .forEach(([type, count]) => {
@@ -2170,7 +2290,7 @@
                             'Procent': `${((count / data.length) * 100).toFixed(1)}%`
                         });
                     });
-                
+
                 dataToExport = summaryData;
                 fileName = `podsumowanie_analizy_${new Date().toISOString().slice(0, 10)}.xlsx`;
             } else {
@@ -2178,23 +2298,23 @@
                 dataToExport = getFilteredData();
                 fileName = `szczegoly_analizy_${new Date().toISOString().slice(0, 10)}.xlsx`;
             }
-            
+
             if (dataToExport.length === 0) {
                 alert('Brak danych do eksportu');
                 return;
             }
-            
+
             const ws = XLSX.utils.json_to_sheet(dataToExport);
             const wb = XLSX.utils.book_new();
             XLSX.utils.book_append_sheet(wb, ws, "Dane");
             XLSX.writeFile(wb, fileName);
         }
-        
+
         // Obsługa przesyłania pliku
-        document.getElementById('fileInput').addEventListener('change', async function(e) {
+        document.getElementById('fileInput').addEventListener('change', async function (e) {
             if (e.target.files.length) {
                 const file = e.target.files[0];
-                
+
                 try {
                     await processFile(file);
                     hideProcessingOverlay();
@@ -2207,38 +2327,38 @@
                 }
             }
         });
-        
+
         // Obsługa przeciągania i upuszczania
         const dropArea = document.getElementById('dropArea');
-        
+
         dropArea.addEventListener('dragover', (e) => {
             e.preventDefault();
             dropArea.classList.add('drag-over');
         });
-        
+
         dropArea.addEventListener('dragleave', () => {
             dropArea.classList.remove('drag-over');
         });
-        
+
         dropArea.addEventListener('drop', (e) => {
             e.preventDefault();
             dropArea.classList.remove('drag-over');
-            
+
             if (e.dataTransfer.files.length) {
                 document.getElementById('fileInput').files = e.dataTransfer.files;
                 document.getElementById('fileInput').dispatchEvent(new Event('change'));
             }
         });
-        
+
         // Obsługa zakładek
-        document.getElementById('homeTab').addEventListener('click', function(e) {
+        document.getElementById('homeTab').addEventListener('click', function (e) {
             e.preventDefault();
             hideAllSections();
             document.getElementById('uploadSection').style.display = 'block';
             updateActiveTab('homeTab');
         });
-        
-        document.getElementById('summaryTab').addEventListener('click', function(e) {
+
+        document.getElementById('summaryTab').addEventListener('click', function (e) {
             e.preventDefault();
             if (processedData.length === 0) {
                 alert('Najpierw prześlij plik do analizy');
@@ -2246,8 +2366,8 @@
             }
             showSummarySection();
         });
-        
-        document.getElementById('detailsTab').addEventListener('click', function(e) {
+
+        document.getElementById('detailsTab').addEventListener('click', function (e) {
             e.preventDefault();
             if (processedData.length === 0) {
                 alert('Najpierw prześlij plik do analizy');
@@ -2255,8 +2375,8 @@
             }
             showDetailsSection();
         });
-        
-        document.getElementById('analysisTab').addEventListener('click', function(e) {
+
+        document.getElementById('analysisTab').addEventListener('click', function (e) {
             e.preventDefault();
             if (processedData.length === 0) {
                 alert('Najpierw prześlij plik do analizy');
@@ -2264,19 +2384,20 @@
             }
             showAnalysisSection();
         });
-        
+
         // Nowy plik
-        document.getElementById('newFileFromSummary').addEventListener('click', function() {
+        document.getElementById('newFileFromSummary').addEventListener('click', function () {
             hideAllSections();
             document.getElementById('uploadSection').style.display = 'block';
             document.getElementById('fileInput').value = '';
             updateActiveTab('homeTab');
         });
-        
+
         // Inicjalizacja
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             console.log('Aplikacja gotowa');
         });
     </script>
 </body>
+
 </html>
