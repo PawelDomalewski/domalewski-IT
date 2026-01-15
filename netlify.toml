@@ -1,0 +1,18 @@
+[build]
+  publish = "."
+  functions = "netlify/functions"
+
+[[redirects]]
+  from = "/raporty/r/*"
+  to = "/raporty/share.html"
+  status = 200
+
+[[redirects]]
+  from = "/api/reports/*"
+  to = "/.netlify/functions/reports/:splat"
+  status = 200
+
+[[redirects]]
+  from = "/api/reports"
+  to = "/.netlify/functions/reports"
+  status = 200
