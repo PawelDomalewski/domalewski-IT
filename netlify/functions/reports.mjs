@@ -22,18 +22,29 @@ export default async (req) => {
     if (!report) return json({ error: "Not found" }, 404);
     return json(report, 200);
   }
+  const exp = report?.expiresAt ? Date.parse(report.expiresAt) : null;
+  if (exp && Date.now() > exp) {
+    await store.delete(id); // usuń z Blobs
+    return json({ error: "Expired" }, 404);
+  }
+
 
   // POST /api/reports
   if (req.method === "POST" && !id) {
     const body = await req.json().catch(() => ({}));
 
     // WHITELIST: zapisujemy tylko agregaty (bez "Kontrahent" i bez surowych wierszy)
+    const TTL_MS = 7 * 24 * 60 * 60 * 1000;
+    const now = Date.now();
+
     const safe = {
-      createdAt: body?.createdAt ?? new Date().toISOString(),
+      createdAt: new Date(now).toISOString(),
+      expiresAt: new Date(now + TTL_MS).toISOString(),
       dateFilter: body?.dateFilter ?? { from: null, to: null },
       aggregatedData: body?.aggregatedData ?? {},
-      chartsData: body?.chartsData ?? {},
+      chartsData: body?.chartsData ?? {}
     };
+
 
     const newId = crypto.randomUUID().slice(0, 10);
     await store.setJSON(newId, safe);
