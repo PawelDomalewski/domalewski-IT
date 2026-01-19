@@ -102,7 +102,7 @@
         <!-- Tabele -->
         <div class="col-lg-6">
           <div class="card p-3">
-            <div class="fw-semibold mb-2">Top rodzaje</div>
+            <div class="fw-semibold mb-2">Rozkład wg rodzaju</div>
             <div class="table-responsive">
               <table class="table table-sm table-striped align-middle mb-0">
                 <thead>
@@ -112,7 +112,7 @@
                     <th class="text-end">%</th>
                   </tr>
                 </thead>
-                <tbody id="topTypes"></tbody>
+                <tbody id="typeAll"></tbody>
               </table>
             </div>
           </div>
@@ -120,21 +120,62 @@
 
         <div class="col-lg-6">
           <div class="card p-3">
-            <div class="fw-semibold mb-2">Top kampanie (wg wolumenu)</div>
+            <div class="fw-semibold mb-2">Wszystkie źródła UTM</div>
+            <div class="table-responsive">
+              <table class="table table-sm table-striped align-middle mb-0">
+                <thead>
+                  <tr>
+                    <th>utm_source</th>
+                    <th class="text-end">Liczba</th>
+                    <th class="text-end">%</th>
+                  </tr>
+                </thead>
+                <tbody id="utmAll"></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12">
+          <div class="card p-3">
+            <div class="fw-semibold mb-2">Wszystkie kampanie</div>
             <div class="table-responsive">
               <table class="table table-sm table-striped align-middle mb-0">
                 <thead>
                   <tr>
                     <th>Kampania</th>
-                    <th class="text-end">Razem</th>
-                    <th class="text-end">% dobrych</th>
+                    <th class="text-end">Liczba</th>
+                    <th class="text-end">%</th>
                   </tr>
                 </thead>
-                <tbody id="topCampaigns"></tbody>
+                <tbody id="campaignAll"></tbody>
               </table>
             </div>
           </div>
         </div>
+
+        <div class="col-12">
+          <div class="card p-3">
+            <div class="fw-semibold mb-2">Wszystkie kampanie z jakością leadów</div>
+            <div class="table-responsive">
+              <table class="table table-sm table-striped align-middle mb-0">
+                <thead>
+                  <tr>
+                    <th>Kampania</th>
+                    <th class="text-end">Dobry</th>
+                    <th class="text-end">Średni</th>
+                    <th class="text-end">Zły</th>
+                    <th class="text-end">Brak</th>
+                    <th class="text-end">Razem</th>
+                    <th class="text-end">% dobrych</th>
+                  </tr>
+                </thead>
+                <tbody id="campaignQualityAll"></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
 
       </div>
 
@@ -159,39 +200,90 @@
       charts = {};
     }
 
+    function escapeHtml(v) {
+      return String(v ?? '')
+        .replaceAll('&', '&amp;')
+        .replaceAll('<', '&lt;')
+        .replaceAll('>', '&gt;')
+        .replaceAll('"', '&quot;')
+        .replaceAll("'", "&#39;");
+    }
+
+    function entriesDesc(obj) {
+      return Object.entries(obj || {}).sort((a, b) => (b[1] || 0) - (a[1] || 0));
+    }
+
+    function renderCountTable(tbodyId, obj, total) {
+      const rows = entriesDesc(obj);
+      document.getElementById(tbodyId).innerHTML = rows.map(([name, count]) => `
+    <tr>
+      <td title="${escapeHtml(name)}">${escapeHtml(name)}</td>
+      <td class="text-end">${fmt(count)}</td>
+      <td class="text-end">${pct(count, total)}</td>
+    </tr>
+  `).join('');
+    }
+
+    function renderCampaignQualityTable(tbodyId, qualityByCampaign) {
+      const qbc = qualityByCampaign || {};
+
+      const rows = Object.entries(qbc).map(([campaign, q]) => {
+        const good = q['dobry'] || 0;
+        const med = q['średni'] || 0;
+        const bad = q['zły'] || 0;
+        const none = q['brak przypisania'] || 0;
+        const sum = good + med + bad + none;
+        const goodPct = sum ? (good / sum * 100) : 0;
+        return { campaign, good, med, bad, none, sum, goodPct };
+      }).sort((a, b) => b.sum - a.sum);
+
+      document.getElementById(tbodyId).innerHTML = rows.map(r => `
+    <tr>
+      <td title="${escapeHtml(r.campaign)}">${escapeHtml(r.campaign)}</td>
+      <td class="text-end">${fmt(r.good)}</td>
+      <td class="text-end">${fmt(r.med)}</td>
+      <td class="text-end">${fmt(r.bad)}</td>
+      <td class="text-end">${fmt(r.none)}</td>
+      <td class="text-end">${fmt(r.sum)}</td>
+      <td class="text-end">${r.goodPct.toFixed(1)}%</td>
+    </tr>
+  `).join('');
+    }
+
     function renderTables(aggr) {
       const total = aggr.totalRows || 0;
 
-      // Top rodzaje
-      const types = Object.entries(aggr.typeCounts || {})
-        .sort((a, b) => b[1] - a[1])
-        .slice(0, 10);
+      // 1) Rozkład wg rodzaju (ALL)
+      renderCountTable('typeAll', aggr.typeCounts, total);
 
-      document.getElementById('topTypes').innerHTML = types.map(([name, count]) => `
-      <tr>
-        <td title="${name}">${name.length > 50 ? name.slice(0, 50) + '…' : name}</td>
-        <td class="text-end">${fmt(count)}</td>
-        <td class="text-end">${pct(count, total)}</td>
-      </tr>
-    `).join('');
+      // 2) Wszystkie kampanie z jakością leadów (ALL)
+      renderCampaignQualityTable('campaignQualityAll', aggr.qualityByCampaign);
 
-      // Top kampanie wg wolumenu + % dobrych
-      const qbc = aggr.qualityByCampaign || {};
-      const camps = Object.entries(qbc).map(([campaign, q]) => {
-        const good = q['dobry'] || 0, med = q['średni'] || 0, bad = q['zły'] || 0, none = q['brak przypisania'] || 0;
-        const sum = good + med + bad + none;
-        const goodPct = sum ? (good / sum * 100) : 0;
-        return { campaign, sum, goodPct };
-      }).sort((a, b) => b.sum - a.sum).slice(0, 10);
+      // 3) Wszystkie kampanie (ALL)
+      renderCountTable('campaignAll', aggr.campaignCounts, total);
 
-      document.getElementById('topCampaigns').innerHTML = camps.map(c => `
+      // 4) Wszystkie źródła UTM (ALL)
+      renderCountTable('utmAll', aggr.utmSourceCounts, total);
+    }
+
+
+    // Top kampanie wg wolumenu + % dobrych
+    const qbc = aggr.qualityByCampaign || {};
+    const camps = Object.entries(qbc).map(([campaign, q]) => {
+      const good = q['dobry'] || 0, med = q['średni'] || 0, bad = q['zły'] || 0, none = q['brak przypisania'] || 0;
+      const sum = good + med + bad + none;
+      const goodPct = sum ? (good / sum * 100) : 0;
+      return { campaign, sum, goodPct };
+    }).sort((a, b) => b.sum - a.sum).slice(0, 10);
+
+    document.getElementById('topCampaigns').innerHTML = camps.map(c => `
       <tr>
         <td title="${c.campaign}">${c.campaign.length > 50 ? c.campaign.slice(0, 50) + '…' : c.campaign}</td>
         <td class="text-end">${fmt(c.sum)}</td>
         <td class="text-end ${c.goodPct >= 50 ? 'text-success' : 'text-danger'}">${c.goodPct.toFixed(1)}%</td>
       </tr>
     `).join('');
-    }
+
 
     function renderCharts(aggr, chartsData) {
       destroyCharts();
